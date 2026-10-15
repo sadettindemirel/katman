@@ -26,6 +26,7 @@ Bu kılavuz öğretim üyesi (yönetici) içindir. Kurulum için `KURULUM.md`, �
 
 - Öğrenci GitHub hesabıyla `/admin/` panelinden yazar. Yazı, "İncelemeye hazır" sütununa taşınınca otomatik pull request (PR) olur.
 - Öğrenci yayımlayamaz. Production yayın yalnızca `main` dalına merge ile olur.
+- **Öğrenci yazıları senin Decap "İş Akışı" ekranına düşmez.** Öğrencinin PR'ı kendi fork'undan gelir ve Decap yöneticinin iş akışında yalnızca ana repodaki dalları listeler. Öğrenci gönderilerinin gelen kutusu GitHub'daki **Pull requests** sekmesidir (bildirim için repoda **Watch → All Activity**). Senin panelindeki İş Akışı yalnızca kendi yazdığın yazılar içindir.
 - Her `main` merge'i bir production deploy demektir ve **15 kredi** harcar (Free plan: 300 kredi/ay). Bu yüzden PR'ları **toplu** yayımlarız. Ayrıntı bölüm 4 ve `KURULUM.md` "Kredi tahmini".
 - Deploy preview ve branch deploy 0 kredidir. Başarısız deploy da 0 kredidir.
 
