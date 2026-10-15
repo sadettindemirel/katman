@@ -1,0 +1,49 @@
+{{- /*
+  Anasayfa bandı: kapak görseli olan yazılar kendiliğinden döner.
+  Önce data/vitrin.yaml'daki yazılar, sonra en yeniler; en fazla 5 yazı.
+  JS yoksa ya da hareket azaltma açıksa kendiliğinden dönmez, oklarla gezilir.
+*/ -}}
+{{- $adaylar := slice }}
+{{- range (hugo.Data.vitrin | default slice) }}
+  {{- with site.GetPage (printf "/yazilar/%s" .) }}{{ $adaylar = $adaylar | append . }}{{ end }}
+{{- end }}
+{{- range (where site.RegularPages "Section" "yazilar").ByDate.Reverse }}
+  {{- $adaylar = $adaylar | append . }}
+{{- end }}
+{{- $slaytlar := slice }}
+{{- range $adaylar }}
+  {{- if and .Params.cover.image (not (in $slaytlar .)) (lt (len $slaytlar) 5) }}
+    {{- $slaytlar = $slaytlar | append . }}
+  {{- end }}
+{{- end }}
+{{- with $slaytlar }}
+<section class="katman-bant" id="katman-bant" aria-roledescription="carousel" aria-label="Öne çıkan yazılar">
+  <div class="katman-bant__ray" aria-live="off">
+    {{- range $i, $p := . }}
+    <a class="katman-bant__slayt" href="{{ $p.RelPermalink }}" role="group" aria-roledescription="slide"
+       aria-label="{{ add $i 1 }} / {{ len $slaytlar }}"{{ if $i }} aria-hidden="true" tabindex="-1"{{ end }}>
+      <img src="{{ $p.Params.cover.image }}" alt="{{ $p.Params.cover.alt | default "" }}"
+           loading="{{ cond (eq $i 0) "eager" "lazy" }}" onerror="this.remove()">
+      <div class="katman-bant__yazi">
+        <p class="katman-bant__ust">
+          {{- with $p.Params.author }}{{ . }} · {{ end }}
+          <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date | time.Format ":date_long" }}</time>
+        </p>
+        <h2 class="katman-bant__baslik">{{ $p.Title }}</h2>
+      </div>
+    </a>
+    {{- end }}
+  </div>
+  {{- if gt (len .) 1 }}
+  <button type="button" class="katman-bant__ok katman-bant__ok--onceki" aria-label="Önceki yazı" hidden>‹</button>
+  <button type="button" class="katman-bant__ok katman-bant__ok--sonraki" aria-label="Sonraki yazı" hidden>›</button>
+  <div class="katman-bant__noktalar" hidden>
+    {{- range $i, $_ := . }}
+    <button type="button" class="katman-bant__nokta" aria-label="{{ add $i 1 }}. yazı"{{ if eq $i 0 }} aria-current="true"{{ end }}></button>
+    {{- end }}
+  </div>
+  {{- $js := resources.Get "js/bant.js" | minify | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+  {{- end }}
+</section>
+{{- end }}

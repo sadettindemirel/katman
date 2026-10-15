@@ -32,6 +32,9 @@
   {{- if not $p.Params.cover.alt }}
     {{- warnf "KATMAN: %s: kapak görselinin alternatif metni yok." $dosya }}
   {{- end }}
+  {{- if findRE `pixabay\.com/.*/download/|drive\.google\.com|unsplash\.com/photos/` . }}
+    {{- warnf "KATMAN: %s: kapak görseli doğrudan görsel bağlantısı değil (%s). Görsele sağ tıklayıp 'Görsel adresini kopyala' ile alınan adres kullanılmalı." $dosya . }}
+  {{- end }}
   {{- if not $p.Params.cover.caption }}
     {{- warnf "KATMAN: %s: kapak görselinin kaynak/telif notu yok." $dosya }}
   {{- end }}

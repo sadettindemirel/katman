@@ -7,8 +7,6 @@ ShowBreadCrumbs: false
 
 **Katman**, Dr. Sadettin Demirel'in Üsküdar Üniversitesi'nde verdiği derslerde hazırlanan öğrenci projelerini içerir: dijital hikâye anlatımı, veri gazeteciliği, veri görselleştirme ve görsel gazetecilik çalışmaları. Çalışmalar ders kapsamında vize ve final ödevi olarak hazırlanır, öğretim üyesi tarafından incelendikten sonra yayımlanır.
 
-*Layers | Student data stories*
-
 ## Künye ve kalıcı adresler
 
 Her yazının kalıcı bir adresi, yayın tarihi ve künyesi (yazar, ders, dönem) vardır. Yayımlanan yazıların adresleri değiştirilmez; atıf için yazının altındaki "Atıf" satırını kullanabilirsiniz.

@@ -1,12 +1,9 @@
 {{- define "main" }}
 {{- $yazilar := where site.RegularPages "Section" "yazilar" }}
 
-<header class="katman-hero">
-  <h1 class="katman-hero__baslik">{{ site.Title }}</h1>
-  <p class="katman-hero__alt">{{ site.Params.tagline }}</p>
-  <p class="katman-hero__alt-en" lang="en">{{ site.Params.taglineEn }}</p>
-  <p class="katman-hero__kurum">{{ site.Params.kurum }}</p>
-</header>
+<h1 class="katman-gizli">{{ site.Title }}</h1>
+
+{{- partial "katman/banner.html" . }}
 
 {{- /* Vitrin: data/vitrin.yaml içindeki dosya adlarının sırasıyla */}}
 {{- $vitrin := slice }}
@@ -26,24 +23,6 @@
 </section>
 {{- end }}
 
-<nav class="katman-bolum katman-filtre" aria-labelledby="goz-at-baslik">
-  <h2 id="goz-at-baslik" class="katman-bolum__baslik">Göz at</h2>
-  {{- range $tax := slice (dict "ad" "donemler" "baslik" "Dönem") (dict "ad" "odevler" "baslik" "Ödev türü") (dict "ad" "tags" "baslik" "Konu") }}
-  {{- with index site.Taxonomies $tax.ad }}
-  <div class="katman-filtre__grup">
-    <h3>{{ $tax.baslik }}</h3>
-    <ul class="terms-tags">
-      {{- $terimler := .ByCount }}
-      {{- if eq $tax.ad "tags" }}{{ $terimler = first 15 $terimler }}{{ end }}
-      {{- range $terimler }}
-      <li><a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }} <sup>{{ .Count }}</sup></a></li>
-      {{- end }}
-    </ul>
-  </div>
-  {{- end }}
-  {{- end }}
-  <p><a href="{{ "arsiv/" | relURL }}">Tüm yazılar ve ayrıntılı filtre →</a></p>
-</nav>
 
 <section class="katman-bolum" aria-labelledby="son-baslik">
   <h2 id="son-baslik" class="katman-bolum__baslik">Son yazılar</h2>

@@ -106,7 +106,7 @@ collections:
             name: image
             widget: string
             required: false
-            hint: "Görseli kendi hesabında (ör. Flickr, Imgur, Wikimedia) barındır ve doğrudan bağlantısını yapıştır. Dosya yükleme kapalıdır."
+            hint: "Görseli kendi hesabında (ör. Flickr, Imgur, Wikimedia) barındır ve doğrudan bağlantısını yapıştır. Görselin üzerine sağ tıklayıp \"Görsel adresini kopyala\"yı kullan; \"İndir\" düğmesinin bağlantısı çalışmaz. Dosya yükleme kapalıdır."
             pattern: ['^$|^https://\S+$', "https:// ile başlayan bir adres olmalı."]
           - label: Alternatif metin
             name: alt

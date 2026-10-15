@@ -141,6 +141,8 @@ Görselin adresi çoğunlukla `.jpg`, `.png` ya da `.webp` ile biter. Bunu elde 
 2. Sağ tık > **Görsel adresini kopyala** (Copy image address). (Menü adı tarayıcıya göre değişir.)
 3. Adres `https://` ile başlıyor mu bak. Başlamıyorsa kullanma.
 
+**"İndir" düğmesinin bağlantısını kullanma.** Pixabay, Unsplash gibi sitelerde "İndir" bağlantısı (örneğin `pixabay.com/.../download/...`) görsel değil, giriş isteyen bir sayfadır; sitede görsel görünmez. Görselin kendisine sağ tıklayıp adresini kopyala. Pixabay'de doğru adres `https://cdn.pixabay.com/photo/...` ile başlar.
+
 ### Görseli nereye yapıştırırsın?
 
 - **Kapak görseli**: Formdaki "Kapak görseli" bölümüne (adres, alternatif metin, kaynak/telif notu).

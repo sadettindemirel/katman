@@ -52,10 +52,8 @@ markup:
     noClasses: false
 
 params:
-  description: "Öğrenci perspektifinden veri hikâyeleri — Dr. Sadettin Demirel'in Üsküdar Üniversitesi'nde verdiği derslerde hazırlanan öğrenci projeleri."
+  description: "Öğrenci perspektifinden veri hikâyeleri."
   tagline: "Öğrenci perspektifinden veri hikâyeleri"
-  taglineEn: "Layers | Student data stories"
-  kurum: "Dr. Sadettin Demirel'in Üsküdar Üniversitesi'nde verdiği derslerde hazırlanan öğrenci projeleri."
   mainSections: [yazilar]
   defaultTheme: auto
   DateFormat: "2 January 2006"
