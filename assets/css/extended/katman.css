@@ -9,6 +9,13 @@
   --katman-kutu: #26262a;
 }
 
+/* Genişlik: telefonda tema varsayılanı; tablet ve üstünde yazılar 960px
+   (gömülü grafikler için), anasayfa ve listeler 1140px. */
+@media (min-width: 768px) {
+  :root { --main-width: 960px; --nav-width: 1140px; }
+  body.list { --main-width: 1140px; }
+}
+
 /* Erişilebilirlik: klavye ile görünür "içeriğe geç" bağlantısı ve odak halkası */
 .skip-link {
   position: absolute;
@@ -38,7 +45,7 @@
   background: var(--katman-kutu);
   aspect-ratio: 16 / 9;
 }
-@media (min-width: 720px) { .katman-bant { aspect-ratio: 21 / 9; } }
+@media (min-width: 720px) { .katman-bant { aspect-ratio: 21 / 8; } }
 .katman-bant__ray { display: flex; height: 100%; transition: transform .6s ease; }
 @media (prefers-reduced-motion: reduce) { .katman-bant__ray { transition: none; } }
 .katman-bant__slayt {
@@ -60,7 +67,7 @@
 @media (min-width: 720px) { .katman-bant__yazi { padding: 64px 32px 40px; } }
 .katman-bant__ust { font-size: 13px; margin: 0 0 6px; opacity: .9; }
 .katman-bant__baslik { font-size: 20px; line-height: 1.25; margin: 0; color: #fff; }
-@media (min-width: 720px) { .katman-bant__baslik { font-size: 28px; } }
+@media (min-width: 720px) { .katman-bant__baslik { font-size: 32px; max-width: 800px; } }
 .katman-bant__slayt:hover .katman-bant__baslik { text-decoration: underline; text-underline-offset: 4px; }
 .katman-bant__ok {
   position: absolute;
@@ -114,6 +121,7 @@
 /* Kart ızgarası: mobilde tek sütun */
 .katman-izgara { display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 720px) { .katman-izgara { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .katman-izgara { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .katman-izgara .post-entry { margin-bottom: 0; }
 .katman-kart h3 { font-size: 20px; line-height: 1.3; }
 .katman-kart .entry-cover img { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; }

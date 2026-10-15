@@ -28,9 +28,9 @@
   <h2 id="son-baslik" class="katman-bolum__baslik">Son yazılar</h2>
   {{- with $yazilar }}
   <div class="katman-izgara">
-    {{- range first 9 .ByDate.Reverse }}{{ partial "katman/kart.html" . }}{{ end }}
+    {{- range first 12 .ByDate.Reverse }}{{ partial "katman/kart.html" . }}{{ end }}
   </div>
-  {{- if gt (len .) 9 }}
+  {{- if gt (len .) 12 }}
   <p><a href="{{ "arsiv/" | relURL }}">Arşivde tüm yazılar ({{ len . }}) →</a></p>
   {{- end }}
   {{- else }}

@@ -85,6 +85,3 @@ menus:
     - name: Hakkında
       pageRef: /hakkinda
       weight: 30
-    - name: Etiketler
-      pageRef: /tags
-      weight: 40

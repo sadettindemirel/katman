@@ -95,14 +95,13 @@ Savaşın ilerleyen günlerinde dış tehdit algısı, toplum içinde daha güç
 
 Bugün gelinen noktada ateşkes süreci devam etse de kalıcı bir barışın sağlanıp sağlanamayacağı belirsizliğini koruyor. Bölgedeki çok katmanlı çatışma dinamikleri ve taraflar arasındaki derin güvensizlik, sürecin her an yeniden tırmanabileceğine işaret ediyor. Bu nedenle diplomatik girişimlerin sürdürülmesi, yalnızca Orta Doğu için değil, küresel istikrar açısından da hayati önem taşıyor.
 
-# 
 
 <iframe allowfullscreen="" frameborder="0" height="650" mozallowfullscreen="" src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vQp9t3Xb8eKdtPVPHdUzH0IOFevl1fF-wchtFtvapgI8PKGq-oNK2nXRnWIwV3U3Rvsd2pvNQW5eHvw&amp;font=Default&amp;lang=tr&amp;initial_zoom=2&amp;width=100%25&amp;height=650" webkitallowfullscreen="" width="100%" title="Zaman çizelgesi"></iframe>
 
 \
 ## ABD-İran çatışmasının bölgesel sonuçları ağırlaşıyor
 
-# İran, İsrail ve ABD arasında tırmanan gerilim kısa sürede bölgenin birçok noktasına yayıldı. İlk günlerde yalnızca askeri hedefler ve karşılıklı açıklamalar üzerinden takip edilen süreç, ilerleyen haftalarda çok daha ağır bir tablo ortaya çıkardı. İran'dan Irak'a, Suriye'den Lübnan'a kadar uzanan geniş bir coğrafyada insanlar [hayatını kaybetti,](https://archive.ph/2026.01.18-104116/https%3A/www.reuters.com/business/media-telecom/iranian-official-says-verified-deaths-iran-protests-reaches-least-5000-2026-01-18/) yaralandı ya da yaşadıkları yerleri terk etmek zorunda kaldı. İnternet kesintileri nedeniyle yaşananların tamamı hâlâ net olarak bilinmese de ortaya çıkan veriler, çatışmaların yalnızca cephe hatlarını değil günlük yaşamı ve bölge ekonomisini de etkilediğini gösteriyor.
+İran, İsrail ve ABD arasında tırmanan gerilim kısa sürede bölgenin birçok noktasına yayıldı. İlk günlerde yalnızca askeri hedefler ve karşılıklı açıklamalar üzerinden takip edilen süreç, ilerleyen haftalarda çok daha ağır bir tablo ortaya çıkardı. İran'dan Irak'a, Suriye'den Lübnan'a kadar uzanan geniş bir coğrafyada insanlar [hayatını kaybetti,](https://archive.ph/2026.01.18-104116/https%3A/www.reuters.com/business/media-telecom/iranian-official-says-verified-deaths-iran-protests-reaches-least-5000-2026-01-18/) yaralandı ya da yaşadıkları yerleri terk etmek zorunda kaldı. İnternet kesintileri nedeniyle yaşananların tamamı hâlâ net olarak bilinmese de ortaya çıkan veriler, çatışmaların yalnızca cephe hatlarını değil günlük yaşamı ve bölge ekonomisini de etkilediğini gösteriyor.
 
 ### **Abd'nin kayıpları ve askeri dengenin sarsılması**
 
@@ -196,6 +195,6 @@ Savaşın etkileri yalnızca çatışma bölgelerinde hissedilmedi. İran, İsr
 
 <iframe aria-label="Line chart" data-external="1" frameborder="0" height="460" id="datawrapper-chart-HOJRh" scrolling="no" src="https://datawrapper.dwcdn.net/HOJRh/1/" style="width: 0; min-width: 100% !important; border: none;" title="Mart–Mayıs Döneminde Benzin ve Dizel Fiyatlarının Seyri"></iframe>
 
-### **Küresel gıda fiyatları da yükseliş eğiliminde **
+### **Küresel gıda fiyatları da yükseliş eğiliminde**
 
 Yaşanan değişim yalnızca Türkiye ile sınırlı değil. Dünyanın farklı bölgelerinde yayımlanan veriler de benzer bir eğilime işaret ediyor. Birleşmiş Milletler Gıda ve Tarım Örgütü'nün [(FAO) yayımladığı Gıda Fiyat Endeksi](https://www.fao.org/home/en/) son dönemde yeniden yükselişe geçti. 2025 yılının başında 118 puan seviyesinde bulunan endeks, yıl boyunca kademeli olarak arttı. Haziran ayında 124 puana ulaşan endeks, yıl sonunda 131 puana yükseldi. 2026 yılının Mart ayında ise 138 puan seviyesine çıktı. Bu rakamlar tek başına çok şey ifade etmeyebilir. Ancak uzmanlar, endeksin yükselmesini dünya genelinde gıda maliyetlerinin arttığının önemli göstergelerinden biri olarak değerlendiriyor. Çünkü tarım ürünleri yalnızca tarlalarda üretilmiyor. Gübre kullanılıyor, makineler çalışıyor, ürünler depolanıyor ve binlerce kilometre taşınıyor. Enerji maliyetlerinde yaşanan her değişim, bu zincirin birçok halkasını etkiliyor. Ortadoğu'da yaşanan gerilim de tam olarak bu nedenle küresel piyasalar tarafından yakından takip ediliyor.
