@@ -6,6 +6,7 @@ ders: "İnternet Ortamında Gazetecilik Uygulamaları"
 donemler: "2024 Bahar"
 odevler: "Final"
 date: 2024-07-03T13:42:00+03:00
+olusturma: 2024-07-03T13:42:00+03:00
 cover:
   image: "https://haberuskudar.com/uploads/content/images/yesilin-direnisi-turkiyenin-cevre-mucadelesi-1855.jpg"
   alt: "Akbelen Ormanı'nın 2023 tarihli Google Earth uydu görüntüsü; ormanın ortasında geniş, açık bir maden sahası."

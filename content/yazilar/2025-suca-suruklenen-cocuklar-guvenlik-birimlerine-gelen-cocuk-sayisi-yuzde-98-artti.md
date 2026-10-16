@@ -6,6 +6,7 @@ ders: "Dijital Medyada Hikaye Anlatımı"
 donemler: "2025 Güz"
 odevler: "Vize"
 date: 2025-12-31T12:10:00+03:00
+olusturma: 2025-12-31T12:10:00+03:00
 cover:
   image: "https://haberuskudar.com/uploads/content/images/suca-suruklenen-cocuklar-guvenlik-birimlerine-gelen-cocuk-sayisi-98-artti-2329.png"
   alt: "Loş bir hücrede, pencereden süzülen ışığın altında başını eğip demir parmaklıklara tutunan bir genç."

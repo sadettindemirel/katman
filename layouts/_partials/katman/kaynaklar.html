@@ -1,5 +1,5 @@
-{{- /* Metnin altı: veri kaynakları (varsa) ve atıf satırı. */ -}}
-<section class="katman-arastirma" aria-label="Kaynaklar ve atıf">
+{{- /* Metnin altı: veri kaynakları (varsa), ilk yayın notu ve künye. */ -}}
+<section class="katman-arastirma" aria-label="Kaynaklar ve künye">
   {{- with .Params.veri_kaynaklari }}
   <h2 id="veri-kaynaklari">Veri kaynakları</h2>
   <ol class="katman-kaynaklar">
@@ -16,10 +16,5 @@
   <p class="katman-ilk-yayin">Bu yazı ilk olarak <a href="{{ . }}" rel="noopener">{{ (urls.Parse .).Host | strings.TrimPrefix "www." }}</a> adresinde yayımlandı: <a href="{{ . }}" rel="noopener">{{ . }}</a></p>
   {{- end }}
 
-  <h2>Atıf</h2>
-  <p class="katman-atif">
-    {{- with .Params.author }}{{ . }} {{ end }}({{ .Date.Format "2006" }}). <cite>{{ .Title }}</cite>. {{ site.Title }}
-    {{- with .Params.ders }}, {{ . }}{{ end }}
-    {{- with .Params.donemler }}, {{ . }}{{ end }}. {{ .Permalink }}
-  </p>
+  {{- partial "katman/kunye.html" . }}
 </section>

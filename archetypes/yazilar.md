@@ -6,6 +6,7 @@ ders: ""
 donemler: "2026 Güz"       # YIL Güz/Bahar/Yaz
 odevler: ""                # Vize ya da Final
 date: {{ .Date }}
+olusturma: {{ .Date }}     # panelde otomatik; sitede gösterilmez
 cover:
   image: ""                # https://... harici görsel
   alt: ""

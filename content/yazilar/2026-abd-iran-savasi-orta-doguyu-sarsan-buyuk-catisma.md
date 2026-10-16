@@ -6,6 +6,7 @@ ders: "Görsel Gazetecilik"
 donemler: "2026 Bahar"
 odevler: "Final"
 date: 2026-06-24T10:49:00+03:00
+olusturma: 2026-06-24T10:49:00+03:00
 cover:
   image: "https://haberuskudar.com/uploads/content/images/2026-abd-iran-savasi-orta-doguyu-sarsan-buyuk-catisma-2555.png"
   alt: "“2026 ABD-İran Savaşı” yazılı afiş: savaş uçakları, füzeler, yanan şehirler, İran haritası ile ABD ve İran bayrakları."

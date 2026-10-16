@@ -153,7 +153,7 @@
   margin: 24px 0;
   font-size: 15px;
 }
-.katman-kunye__baslik { font-size: 15px; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 8px; }
+.katman-kunye .katman-kunye__baslik { font-size: 15px; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 8px; }
 .katman-kunye dl { margin: 0; display: grid; gap: 6px; }
 .katman-kunye dl > div { display: grid; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 560px) { .katman-kunye dl > div { grid-template-columns: 140px minmax(0, 1fr); gap: 12px; } }
@@ -177,8 +177,8 @@
 .katman-arastirma a { box-shadow: 0 1px 0 var(--primary); }
 .katman-kaynaklar { padding-left: 20px; }
 .katman-kaynaklar li { margin: 4px 0; }
-.katman-kaynak-tarih, .katman-atif { color: var(--secondary); }
-.katman-atif { font-size: 15px; overflow-wrap: anywhere; }
+.katman-kaynak-tarih { color: var(--secondary); }
+.katman-arastirma > .katman-kunye:first-child { margin-top: 0; }
 .katman-ilk-yayin { font-size: 15px; color: var(--secondary); overflow-wrap: anywhere; margin-bottom: 24px; }
 
 /* Arşiv */

@@ -80,6 +80,31 @@
     }
   });
 
+  // ---------------------------------------------------------------- Oluşturulma tarihi
+  // Salt okunur alan: boşsa (yeni yazı) o anın tarihini yazar, sonra yalnızca gösterir.
+  function simdi() {
+    var d = new Date(), o = -d.getTimezoneOffset(), p = function (n) { return ('0' + Math.abs(n)).slice(-2); };
+    return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()) + 'T' + p(d.getHours()) + ':' +
+      p(d.getMinutes()) + ':' + p(d.getSeconds()) + (o >= 0 ? '+' : '-') + p(Math.floor(Math.abs(o) / 60)) + ':' + p(o % 60);
+  }
+
+  function OlusturmaKontrol(props) {
+    var deger = props.value;
+    if (!deger) {
+      var onChange = props.onChange;
+      setTimeout(function () { onChange(simdi()); }, 0);
+    }
+    var d = deger ? new Date(deger) : null;
+    var yazi = d && !isNaN(d)
+      ? d.toLocaleString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })
+      : 'Kaydedince otomatik dolacak';
+    return h('div', { id: props.forID, className: props.classNameWrapper, style: { opacity: 0.8 } }, yazi);
+  }
+
+  CMS.registerWidget('olusturma', OlusturmaKontrol, function (props) {
+    return h('span', null, props.value || '');
+  });
+
   // ---------------------------------------------------------------- Önizleme
   // Sitenin gerçek stil dosyası (Hugo parmak izli adres verir) anasayfadan bulunur.
   CMS.registerPreviewStyle('/admin/onizleme.css');
@@ -168,22 +193,22 @@
             h('h1', { className: 'post-title' }, baslik || 'Başlıksız yazı'),
             ozet ? h('div', { className: 'post-description' }, ozet) : null,
             h('div', { className: 'post-meta' }, [yazar, tarih].filter(Boolean).join(' · '))),
-          kunye.length ? h('aside', { className: 'katman-kunye' },
-            h('h2', { className: 'katman-kunye__baslik' }, 'Künye'),
-            h('dl', null, kunye.map(function (s) {
-              return h('div', { key: s[0] }, h('dt', null, s[0]), h('dd', null, s[1]));
-            }))) : null,
           kapak ? h('figure', { className: 'entry-cover' },
             h('img', { src: kapak, alt: d(['cover', 'alt']) || '' }),
             d(['cover', 'caption']) ? h('figcaption', null, d(['cover', 'caption'])) : null) : null,
           h('div', { className: 'post-content md-content' }, props.widgetFor('body')),
-          kaynaklar.length ? h('section', { className: 'katman-arastirma' },
-            h('h2', null, 'Veri kaynakları'),
-            h('ol', { className: 'katman-kaynaklar' }, kaynaklar.map(function (k, i) {
+          (kaynaklar.length || kunye.length) ? h('section', { className: 'katman-arastirma' },
+            kaynaklar.length ? h('h2', null, 'Veri kaynakları') : null,
+            kaynaklar.length ? h('ol', { className: 'katman-kaynaklar' }, kaynaklar.map(function (k, i) {
               var ad = k.get('ad'), bag = guvenliAdres(k.get('baglanti'), /^https?:\/\/\S+$/), t = k.get('tarih');
               return h('li', { key: i }, bag ? h('a', { href: bag, target: '_blank', rel: 'noopener' }, ad) : ad,
                 t ? h('span', { className: 'katman-kaynak-tarih' }, ' (' + t + ')') : null);
-            }))) : null,
+            })) : null,
+            kunye.length ? h('aside', { className: 'katman-kunye' },
+              h('h2', { className: 'katman-kunye__baslik' }, 'Künye'),
+              h('dl', null, kunye.map(function (s) {
+                return h('div', { key: s[0] }, h('dt', null, s[0]), h('dd', null, s[1]));
+              }))) : null) : null,
           etiketler.length ? h('footer', { className: 'post-footer' },
             h('ul', { className: 'post-tags' }, etiketler.map(function (t) {
               return h('li', { key: t }, h('a', null, t));

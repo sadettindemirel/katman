@@ -6,6 +6,7 @@ ders: "Dijital Medyada Hikaye Anlatımı"
 donemler: "2025 Güz"
 odevler: "Final"
 date: 2026-01-01T14:48:00+03:00
+olusturma: 2026-01-01T14:48:00+03:00
 cover:
   image: "https://haberuskudar.com/uploads/content/images/kirada-buyuk-kriz-istanbulda-fiyatlar-rekor-kirmaya-devam-ediyor-2332.png"
   alt: "Renkli maket evlerin üzerinde tutulan bir ev anahtarı."

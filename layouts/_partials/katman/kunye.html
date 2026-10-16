@@ -22,8 +22,5 @@
     <div><dt>İlk yayın</dt><dd><a href="{{ . }}" rel="noopener">{{ (urls.Parse .).Host | strings.TrimPrefix "www." }}</a></dd></div>
     {{- end }}
     <div><dt>Kalıcı adres</dt><dd><a href="{{ .Permalink }}">{{ .Permalink }}</a></dd></div>
-    {{- with .Params.veri_kaynaklari }}
-    <div><dt>Kaynaklar</dt><dd><a href="#veri-kaynaklari">{{ len . }} veri kaynağı</a></dd></div>
-    {{- end }}
   </dl>
 </aside>

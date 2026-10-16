@@ -6,6 +6,7 @@ ders: "Görsel Gazetecilik"
 donemler: "2025 Güz"
 odevler: "Final"
 date: 2026-01-01T14:47:00+03:00
+olusturma: 2026-01-01T14:47:00+03:00
 cover:
   image: "https://haberuskudar.com/uploads/content/images/turkiyede-artan-ani-seller-iklim-krizinin-agir-sonuclarina-hazir-miyiz-2331.png"
   alt: "Sel sularıyla kaplanmış bir yerleşim yerinin havadan görünümü."

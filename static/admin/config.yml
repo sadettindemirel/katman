@@ -48,8 +48,14 @@ collections:
     # Dosya adı = kalıcı adres. Yayından sonra değiştirilmez.
     slug: "{{year}}-{{slug}}"
     preview_path: "yazilar/{{slug}}/"
-    summary: "{{title}} — {{author}} ({{donemler}}, {{odevler}})"
-    sortable_fields: [date, title, author]
+    # Listede yayın ve oluşturulma tarihi görünür; sıralama menüsünde son güncelleme de var.
+    summary: "{{title}} — {{author}} ({{donemler}}, {{odevler}}) · Yayın: {{date | date('DD.MM.YYYY')}} · Oluşturulma: {{olusturma | date('DD.MM.YYYY')}}"
+    sortable_fields:
+      - { field: date, label: Yayın tarihi }
+      - { field: olusturma, label: Oluşturulma tarihi }
+      - { field: commit_date, label: Son güncelleme }
+      - { field: title, label: Başlık }
+      - { field: author, label: Yazar }
     view_filters:
       - label: Vize
         field: odevler
@@ -99,6 +105,13 @@ collections:
         format: "YYYY-MM-DDTHH:mm:ssZ"
         date_format: "DD.MM.YYYY"
         time_format: "HH:mm"
+
+      # Yazı ilk açıldığında otomatik dolar, değiştirilemez (widget: katman-cms.js).
+      # Sitede gösterilmez; panelde listeleme ve sıralama içindir.
+      - label: Oluşturulma tarihi
+        name: olusturma
+        widget: olusturma
+        required: false
 
       # --- Kapak görseli (harici URL) ---
       - label: Kapak görseli

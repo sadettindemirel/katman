@@ -6,6 +6,7 @@ ders: "Dijital Medyada Hikaye Anlatımı"
 donemler: "2026 Bahar"
 odevler: "Final"
 date: 2026-03-10T12:07:00+03:00
+olusturma: 2026-03-10T12:07:00+03:00
 cover:
   image: "https://haberuskudar.com/uploads/content/images/turkiyede-kadin-istihdami-sayilarla-gorunen-ve-gorunmeyen-esitsizlikler-2410.png"
   alt: "Yazıda görüşlerine yer verilen dört kişinin fotoğraflarından oluşan kolaj; arka planda farklı mesleklerden kadın figürleri ve yükselen bir grafik."

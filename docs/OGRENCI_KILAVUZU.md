@@ -77,6 +77,7 @@ Panelde göreceğin alan adları aşağıdakilerle aynıdır. Zorunlu alanları 
 | **Dönem** | Evet | Biçim: `YIL Güz`, `YIL Bahar` ya da `YIL Yaz`. Örnek: `2026 Güz`. Başka biçim kabul edilmez. |
 | **Ödev türü** | Evet | `Vize` ya da `Final` seç. |
 | **Yayın tarihi** | Evet | Gün.Ay.Yıl ve saat. Yazının yayın tarihi olarak gösterilir. Yayından sonra değişmemeli, çünkü yarışmalarda referans olur. Doğru tarihi seç. |
+| **Oluşturulma tarihi** | — | Yazıyı ilk açtığın an otomatik yazılır, değiştiremezsin. Sitede görünmez. |
 | **Kapak görseli** | Hayır | Üç alt alanı var (aşağıda). Görsel eklemezsen bu bölümü boş bırak. |
 | **Konu etiketleri** | Evet | Yazının konusu. Örnek: `iklim`, `deprem`, `ulaşım`. Virgülle ayırarak ya da tek tek ekle. |
 | **Metin** | Evet | Yazının kendisi. Word ya da WordPress'teki gibi düğmelerle biçimlendirilir (bölüm 6). |

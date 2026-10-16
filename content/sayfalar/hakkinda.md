@@ -9,7 +9,7 @@ ShowBreadCrumbs: false
 
 ## Künye ve kalıcı adresler
 
-Her yazının kalıcı bir adresi, yayın tarihi ve künyesi (yazar, ders, dönem) vardır. Yayımlanan yazıların adresleri değiştirilmez; atıf için yazının altındaki "Atıf" satırını kullanabilirsiniz.
+Her yazının kalıcı bir adresi, yayın tarihi ve künyesi (yazar, ders, dönem) vardır. Yayımlanan yazıların adresleri değiştirilmez; künye yazının en altında yer alır.
 
 ## Veri ve kaynaklar
 

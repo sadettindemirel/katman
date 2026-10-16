@@ -6,6 +6,7 @@ ders: "İnternet Ortamında Gazetecilik Uygulamaları"
 donemler: "2024 Bahar"
 odevler: "Final"
 date: 2024-07-03T11:35:00+03:00
+olusturma: 2024-07-03T11:35:00+03:00
 cover:
   image: "https://haberuskudar.com/uploads/content/images/turkiye-depreme-karsi-tek-yurek-6-subat-binalari-yendi-dayanismayi-yenemedi-1854.jpg"
   alt: "Antakya'nın Nisan 2023 tarihli Google Earth uydu görüntüsü; depremde yıkılan binaların yerinde boşalmış alanlar görülüyor."
