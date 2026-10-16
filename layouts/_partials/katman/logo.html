@@ -1,0 +1,11 @@
+{{- /* Katman işareti: üstte kaldırılmış kırmızı katman, ortada saydam veri katmanı, altta zemin.
+       Renkler temaya uyar (currentColor + --katman-vurgu). Aynı çizim: static/favicon.svg, static/admin/katman-logo.svg */ -}}
+<svg class="katman-logo" viewBox="0 0 48 48" width="28" height="28" aria-hidden="true" focusable="false">
+  <defs>
+    <mask id="katman-logo-u" maskUnits="userSpaceOnUse"><rect width="48" height="48" fill="#fff"/><path d="M24 3 44 13 24 23 4 13Z" stroke="#000" stroke-width="5" stroke-linejoin="round"/></mask>
+    <mask id="katman-logo-o" maskUnits="userSpaceOnUse"><rect width="48" height="48" fill="#fff"/><path d="M24 16 44 26 24 36 4 26Z" stroke="#000" stroke-width="4" stroke-linejoin="round"/></mask>
+  </defs>
+  <path d="M24 25 44 35 24 45 4 35Z" fill="currentColor" mask="url(#katman-logo-o)"/>
+  <path d="M24 16 44 26 24 36 4 26Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" mask="url(#katman-logo-u)"/>
+  <path d="M24 3 44 13 24 23 4 13Z" fill="var(--katman-vurgu)"/>
+</svg>

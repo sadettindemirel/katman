@@ -18,13 +18,17 @@ draft: false
 
 **Türkiye’de çocukların suça sürüklenme oranları her yıl düzenli olarak artıyor. 2024 yılı verileri, çocukların yalnızca fail olarak değil, aynı zamanda mağdur olarak da ciddi risk altında olduğunu gösteriyor. Yoksulluk, aile içi sorunlar, göç, eğitime erişim problemleri ve dijital medya etkisi, tabloyu hem sosyolojik hem de psikolojik açıdan daha karmaşık hale getiriyor.**
 
+<div class="katman-gomme">
 <div class="flourish-embed" data-src="story/3523419"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/story/3523419/thumbnail" width="100%" alt="visualization" /></noscript></div>
+</div><!-- /gomme -->
 
 ## 612 Bin 651 çocuk güvenlik birimlerine geldi
 
 TÜİK’in yayımladığı son verilere göre, 2024 yılında güvenlik birimlerine gelen veya getirilen çocuk sayısı önceki yıla göre %9,8 artarak 612 bin 651’e ulaştı. Bu çocukların 279 bin 620’si mağdur olarak kaydedilirken, 202 bin 785’i suça sürüklenen çocuk statüsünde işlem gördü. Ayrıca 96 bin 438 çocuğun bilgisine başvuruldu, 18 bin 561’i kayıp olarak bildirildi, 8 bin 729’u kabahat işlediği iddiasıyla, 6 bin 518’i ise çeşitli diğer nedenlerle güvenlik birimlerine götürüldü.
 
+<div class="katman-gomme">
 <div class="flourish-embed" data-src="story/3467586"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/story/3467586/thumbnail" width="100%" alt="visualization" /></noscript></div>
+</div><!-- /gomme -->
 
 ## Suça sürüklenen çocukların %40,4’ü yaralama olayına karıştı
 
@@ -34,7 +38,9 @@ TÜİK verilerine göre, 2024 yılında suça sürüklenen 202.785 çocuğa isna
 
 Güvenlik birimlerine mağdur olarak gelen 279.620 çocuk, toplam çocuk sayısının neredeyse yarısını oluştururken, bu çocukların %55,3’ü yaralama, %10,8’i cinsel suç, %9,5’i göçmen kaçakçılığı ve %8’i aile düzenine karşı işlenen suçların mağduru olarak kayıtlara geçti.
 
+<div class="katman-gomme">
 <iframe aria-label="Choropleth map" data-="" external="1" frameborder="0" height="650" id="datawrapper-chart-IBwVD" scrolling="no" src="https://datawrapper.dwcdn.net/IBwVD/1/" style="width: 0; min-width: 100% !important; border: none;" title="Türkiye’de İllere Göre Çocuk Suç Oranları (2024)"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper- height"][t]+"px";r.style.height=d}}});</script>
+</div><!-- /gomme -->
 
 [İnegöl Online'ın haberine](https://www.inegolonline.com/amp/haber/illerin-suca-suruklenen-cocuk-orani-aciklandi-85940) göre TÜİK’in il nüfuslarına göre yaptığı sıralamada Türkiye’de çocuk suç oranının en yüksek olduğu iller Ardahan (binde 7) ile başlarken, onu Erzincan (binde 6,2), Iğdır (binde 4,2), Yalova (binde 4,2), Karaman (binde 4,1), Niğde (binde 4,0),Düzce (binde 3,8), Bartın (binde 3,8), Edirne (binde 3,8) ve Nevşehir (binde 3,8) izliyor.
 
@@ -42,7 +48,9 @@ Bu illerde yer alan çocuk cezaevleri, ÇHÇE (Çocuk Eğitim Evleri) ve diğer 
 
 ## Türkiye’de ses getirmiş çocuk mağdurları ve çocuk failleri
 
+<div class="katman-gomme">
 <iframe allowfullscreen="" frameborder="0" height="650" mozallowfullscreen="" src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vQFLuFO0d2qL-INa8g8YIFOC9qoKnPyzrYBBiCLXql8ZIV9sVb9aplAODXEHtPUhfS4IWmgA7oSzdnI&amp;font=Default&amp;lang=tr&amp;initial_zoom=2&amp;width=100%25&amp;height=650" webkitallowfullscreen="" width="100%" title="Zaman çizelgesi"></iframe>
+</div><!-- /gomme -->
 
 Türkiye’de çocukların suça sürüklenmesi ya da ağır suçların mağduru haline gelmesi, çoğu zaman adli bir vaka olmanın ötesine geçerek toplumsal bir travmaya dönüşüyor. Yıllar içinde büyük yankı uyandıran Münevver Karabulut cinayeti, Narin Güran olayı ve Ahmet Minguzzi vakası da bu durumun en çarpıcı örnekleri olarak toplumu derinden sarsan olaylar arasında yer aldı.
 

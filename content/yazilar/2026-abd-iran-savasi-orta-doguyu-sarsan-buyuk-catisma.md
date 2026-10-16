@@ -80,7 +80,9 @@ Hamaney’in öldürülmesi, savaşın başında İran rejiminin çökeceğine d
 Savaşın ilerleyen günlerinde dış tehdit algısı, toplum içinde daha güçlü bir birlik duygusu oluşturdu. Bu durum, rejimin zayıflaması yerine daha merkezi ve sert bir yapıya yönelmesine yol açtı. Böylece “[rejim değişikliği](https://teyit.org/demec-kontrolu/abdnin-iranda-rejim-degisikligi-gerceklestirdigi-iddiasi)” hedefi, sahadaki gerçeklikle örtüşmeyen bir beklenti olarak kaldı.\
 \
 
+<div class="katman-gomme">
 <iframe frameborder="0" height="800" src="https://uploads.knightlab.com/storymapjs/b29f96666c6d38543e3b9e1ab58e96d2/vize/index.html" width="100%" title="Hikâye haritası"></iframe>
+</div><!-- /gomme -->
 
 \
 ## Türkiye'nin diplomatik hamleleri ve ateşkes süreci
@@ -96,7 +98,9 @@ Savaşın ilerleyen günlerinde dış tehdit algısı, toplum içinde daha güç
 Bugün gelinen noktada ateşkes süreci devam etse de kalıcı bir barışın sağlanıp sağlanamayacağı belirsizliğini koruyor. Bölgedeki çok katmanlı çatışma dinamikleri ve taraflar arasındaki derin güvensizlik, sürecin her an yeniden tırmanabileceğine işaret ediyor. Bu nedenle diplomatik girişimlerin sürdürülmesi, yalnızca Orta Doğu için değil, küresel istikrar açısından da hayati önem taşıyor.
 
 
+<div class="katman-gomme">
 <iframe allowfullscreen="" frameborder="0" height="650" mozallowfullscreen="" src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vQp9t3Xb8eKdtPVPHdUzH0IOFevl1fF-wchtFtvapgI8PKGq-oNK2nXRnWIwV3U3Rvsd2pvNQW5eHvw&amp;font=Default&amp;lang=tr&amp;initial_zoom=2&amp;width=100%25&amp;height=650" webkitallowfullscreen="" width="100%" title="Zaman çizelgesi"></iframe>
+</div><!-- /gomme -->
 
 \
 ## ABD-İran çatışmasının bölgesel sonuçları ağırlaşıyor
@@ -127,7 +131,9 @@ Birçok bölgede ne yaşandığını tam olarak görmek mümkün olmadı. [İnte
 
 [Reuters’a](https://www.reuters.com/world/iran-deaths-went-beyond-protesters-hitting-bystanders-too-witnesses-say-2026-01-21/) konuşan bazı İranlı yetkililer, ölenlerin arasında güvenlik görevlilerinin de bulunduğunu söyledi. Özellikle Kürt bölgelerinde çatışmaların daha sert geçtiğine dair bilgiler paylaşıldı. Sokaktan gelen kısa videolarda boşalan caddeler, kapalı kepenkler ve ağır güvenlik önlemleri dikkat çekiyordu. Bazı mahallelerde geceleri siren seslerinin hiç eksik olmadığı anlatılıyor. İnsanlar sadece protestolardan değil, belirsizlikten de korkmaya başlamıştı.
 
+<div class="katman-gomme">
 <iframe aria-label="Choropleth map" data-external="1" frameborder="0" height="800" id="datawrapper-chart-7pa1i" scrolling="no" src="https://datawrapper.dwcdn.net/7pa1i/3/" style="border: none; width: 100%; height: 800px;" title="Orta Doğu'da kaydedilen can kayıpları dağılımı" width="100"></iframe>
+</div><!-- /gomme -->
 
 ### **İran'daki gerilim kısa sürede sınırları aşmaya başladı**
 
@@ -137,13 +143,17 @@ Olaylar büyüdükçe bunun yalnızca İran’ın iç meselesi olarak kalmayaca�
 
 İran’daki gelişmelerin etkisi kısa süre içinde Suriye’de de hissedilmeye başladı. Yıllardır çatışmaların gölgesinde yaşayan ülkede, İran bağlantılı gruplar ile İsrail arasındaki [saldırılar yeniden yoğunlaştı](https://www.reuters.com/world/middle-east/). Özellikle sınır bölgelerinde zaman zaman patlama seslerinin duyulduğu, bazı askeri noktaların hedef alındığı bildirildi. Şu ana kadar yayımlanan verilere göre Suriye’de en az 183 kişi hayatını kaybetti. Yaralı sayısının ise 600’ü geçtiği tahmin ediliyor. Ama rakamların ötesinde başka bir gerçek daha vardı. Suriye’de insanlar zaten uzun yıllardır savaşın içinde yaşamaya çalışıyordu. Şimdi bölgedeki yeni gerilim, ülkedeki eski korkuları yeniden hatırlatmaya başladı. Bazı bölgelerde insanlar yeniden temel ihtiyaç stoklamaya başladı. Çünkü birçok kişi olayların daha da büyümesinden endişe ediyor.
 
+<div class="katman-gomme">
 <iframe aria-label="Bar Chart" data-external="1" frameborder="0" height="476" id="datawrapper-chart-zQhOP" scrolling="no" src="https://datawrapper.dwcdn.net/zQhOP/2/" style="width: 0; min-width: 100% !important; border: none;" title="Ortadoğu geriliminde ülkelere göre yaralı sayıları"></iframe>
+</div><!-- /gomme -->
 
 ## Lübnan'da insanlar yeniden göç etmeye başladı
 
 Krizin etkilerinin hissedildiği ülkelerden biri de Lübnan oldu. Özellikle sınır hattında yaşanan saldırılar nedeniyle bazı bölgelerde insanlar [evlerini terk etmeye başladı.](https://www.unhcr.org/where-we-work/regions/middle-east-and-north-africa?dataset=POP&yearsMode=range&selectedYears=%5B2012%2C2026%5D&level=REG&category=PTY&fundingSource=ALS&compareBy=%5B%22category%22%5D&levelCompare=%5B%5B%22RMENA%22%5D%5D&viewType=chart&chartType=bar&contextualDataset=BUD&tableDataView=absolute) Yardım kuruluşları, sınıra yakın yaşayan sivillerin daha güvenli bölgelere gitmeye çalıştığını söylüyor. Açık kaynak verilerine göre Lübnan’da yaklaşık 217 kişi hayatını kaybetti, yüzlerce kişi yaralandı. Ülkede zaten yıllardır devam eden ekonomik kriz nedeniyle insanların büyük bölümü temel ihtiyaçlarını karşılamakta zorlanıyordu. Şimdi buna bir de güvenlik korkusu eklenmiş durumda. Bazı mahallelerde marketlerin erken kapandığı, sokakların akşam saatlerinden sonra boşaldığı anlatılıyor. İnsanlar bir yandan günlük hayatlarına devam etmeye çalışıyor, diğer yandan sınırdan gelecek yeni haberleri takip ediyor.
 
+<div class="katman-gomme">
 <iframe aria-label="Donut Chart" data-external="1" frameborder="0" height="570" id="datawrapper-chart-tFo84" scrolling="no" src="https://datawrapper.dwcdn.net/tFo84/5/" style="width: 0; min-width: 100% !important; border: none;" title="Savaşın ardından büyüyen göç dalgası"></iframe>
+</div><!-- /gomme -->
 
 ## Körfez ülkelerinde asıl korku daha büyük bir savaş ihtimali
 
@@ -167,7 +177,9 @@ Piyasayı aslında en çok oynatan şey sadece fiyat değil. Ne olacağı net ol
 
 \
 
+<div class="katman-gomme">
 <iframe aria-label="Column Chart" data-external="1" frameborder="0" height="600" id="datawrapper-chart-GuXuv" scrolling="no" src="https://datawrapper.dwcdn.net/GuXuv/1/" style="border: none; width: 100%; height: 600px;" title="Orta Doğu'da İnternet Kesintileri" width="100"></iframe>
+</div><!-- /gomme -->
 
 ### **Ortaya çıkan tablo bölgenin ne kadar kırılgan olduğunu yeniden gösterdi**
 
@@ -187,13 +199,17 @@ Irak petrol üreticisi bir ülke olmasına rağmen bölgedeki güvenlik riskleri
 
 İran'da başlayan protestoların ardından ortaya çıkan tablo yalnızca can kayıplarıyla sınırlı kalmadı. Ölümler, yaralanmalar, yerinden edilmeler ve internet kesintilerinin ardından ekonomik etkiler de daha görünür hale geldi. Brent petrol fiyatlarında yaşanan yükseliş, bölgedeki gerilimin enerji piyasalarına nasıl yansıdığını ortaya koyarken, bunun etkileri Türkiye'den Körfez ülkelerine kadar geniş bir coğrafyada hissedildi. Bugün gelinen noktada petrol grafiği yalnızca enerji piyasalarını değil, bölgede yaşanan krizin ekonomik boyutunu da gösteren göstergelerden biri olarak öne çıkıyor.
 
+<div class="katman-gomme">
 <iframe aria-label="Small multiple line chart" data-external="1" frameborder="0" height="415" id="datawrapper-chart-ewkwa" scrolling="no" src="https://datawrapper.dwcdn.net/ewkwa/2/" style="width: 0; min-width: 100% !important; border: none;" title="İran krizi sonrası Brent Petrol fiyatlarının seyri"></iframe>
+</div><!-- /gomme -->
 
 ### **Yükselen petrol raflara da yansıdı**
 
 Savaşın etkileri yalnızca çatışma bölgelerinde hissedilmedi. İran, İsrail ve ABD arasında büyüyen gerilim boyunca gözler çoğunlukla ölü sayılarında, yaralılarda ve bölgeden gelen görüntülerdeydi. Ancak aynı dönemde sessizce değişen başka bir tablo daha vardı. Market fiyatları. Petrol fiyatlarındaki yükseliş ilk olarak akaryakıt istasyonlarında hissedildi. Ardından taşımacılık maliyetleri arttı. Kamyonların, kargo araçlarının ve üretim tesislerinin maliyetleri yükseldikçe bunun etkisi market raflarına kadar ulaştı. [Son bir yıllık veriler,](https://www.tuik.gov.tr/) temel gıda ürünlerinde dikkat çekici artışlar yaşandığını gösteriyor. En belirgin yükseliş ekmekte görüldü. 2025 yılında ortalama 12 TL olan bir kilogram ekmek, 2026 yılında 16 TL seviyesine çıktı. Benzer bir tablo süt, yumurta ve ayçiçek yağında da yaşandı. Bir litre sütün ortalama fiyatı 25 TL'den 32 TL'ye yükselirken, 30'lu yumurta kolisinin fiyatı 85 TL'den 110 TL'ye çıktı. Ayçiçek yağında ise bir yıl içinde yaklaşık yüzde 30'luk artış yaşandı. Tavuk eti fiyatları da yükselişten etkilenen ürünler arasında yer aldı. Geçen yıl ortalama 85 TL olan kilogram fiyatı bu yıl 105 TL seviyelerine ulaştı. Elbette bu artışların tek nedeni savaş ya da petrol fiyatları değil. Enflasyon, döviz kuru ve üretim maliyetleri de fiyatları etkiliyor. Ancak enerji maliyetlerinde yaşanan yükselişin, günlük hayatta karşılaşılan birçok ürünün fiyatına doğrudan ya da dolaylı olarak yansıdığı görülüyor. Bugün markete giren bir tüketici için savaş kilometrelerce uzakta yaşanıyor olabilir. Ancak o savaşın ekonomik etkileri, alışveriş fişlerinde çok daha yakından hissediliyor.
 
+<div class="katman-gomme">
 <iframe aria-label="Line chart" data-external="1" frameborder="0" height="460" id="datawrapper-chart-HOJRh" scrolling="no" src="https://datawrapper.dwcdn.net/HOJRh/1/" style="width: 0; min-width: 100% !important; border: none;" title="Mart–Mayıs Döneminde Benzin ve Dizel Fiyatlarının Seyri"></iframe>
+</div><!-- /gomme -->
 
 ### **Küresel gıda fiyatları da yükseliş eğiliminde**
 

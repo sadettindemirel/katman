@@ -26,6 +26,7 @@ module:
 permalinks:
   page:
     yazilar: /yazilar/:contentbasename/
+    sayfalar: /:contentbasename/   # content/sayfalar/hakkinda.md → /hakkinda/
 
 taxonomies:
   tag: tags          # konu etiketleri
@@ -48,6 +49,10 @@ markup:
       # Öğrencilerin gömme kodları (iframe, script) olduğu gibi çalışsın diye açık.
       # Güvenlik denetimi PR incelemesinde yapılır (bkz. docs/YONETICI_KILAVUZU.md).
       unsafe: true
+    parser:
+      # Tek başına satırdaki görseller <p> içine alınmaz; render hook onları
+      # altyazılı <figure> olarak basar (bkz. layouts/_markup/render-image.html).
+      wrapStandAloneImageWithinParagraph: false
   highlight:
     noClasses: false
 
@@ -71,17 +76,8 @@ params:
     responsiveImages: false
   assets:
     disableHLJS: true
+    favicon: /favicon.svg
   fuseOpts:
     keys: [title, permalink, summary, content]
 
-menus:
-  main:
-    - name: Arşiv
-      pageRef: /arsiv
-      weight: 10
-    - name: Ara
-      pageRef: /ara
-      weight: 20
-    - name: Hakkında
-      pageRef: /hakkinda
-      weight: 30
+# Ana menü config/_default/menus.yaml dosyasındadır (Decap'te "Site menüsü"nden düzenlenir).

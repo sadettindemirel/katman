@@ -1,0 +1,12 @@
+{{- /* Metin içi görseller. Tek başına satırdaki görsel başlıklıysa (![alt](adres "başlık"))
+       altyazılı <figure> olur; Decap'teki "Görsel" bileşeninin "Görsel altı yazısı" alanı buraya gelir. */ -}}
+{{- if and .IsBlock .Title }}
+<figure class="katman-figur">
+  <img src="{{ .Destination | safeURL }}" alt="{{ .PlainText }}" loading="lazy">
+  <figcaption>{{ .Title }}</figcaption>
+</figure>
+{{- else if .IsBlock }}
+<p><img src="{{ .Destination | safeURL }}" alt="{{ .PlainText }}" loading="lazy"></p>
+{{- else -}}
+<img src="{{ .Destination | safeURL }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy">
+{{- end -}}

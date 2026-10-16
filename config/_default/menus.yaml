@@ -1,0 +1,10 @@
+main:
+  - name: Arşiv
+    url: /arsiv/
+    weight: 10
+  - name: Ara
+    url: /ara/
+    weight: 20
+  - name: Hakkında
+    url: /hakkinda/
+    weight: 30

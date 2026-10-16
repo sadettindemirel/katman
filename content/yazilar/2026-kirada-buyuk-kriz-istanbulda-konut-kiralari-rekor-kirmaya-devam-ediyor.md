@@ -20,7 +20,9 @@ draft: false
 
 2019–2025 yıllarını kapsayan veriler, İstanbul’da kira artışlarının neredeyse her yıl yüksek oranlarda gerçekleştiğini ortaya koyuyor. 2025 itibarıyla ortalama kira bedelleri 30 bin TL seviyelerine ulaşırken, bazı ilçelerde çok daha yüksek rakamlar konuşuluyor. Aşağıdaki grafik, İstanbul’da son yıllarda kira fiyatlarındaki artışın seyrini açıkça gösteriyor.
 
+<div class="katman-gomme">
 <div class="flourish-embed flourish-chart" data-src="visualisation/26471181"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/26471181/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+</div><!-- /gomme -->
 
 Bu veriler, İstanbul kira piyasasında kalıcı ve yapısal bir baskının oluştuğunu, önümüzdeki dönemde istikrarlı bir çözüm için kapsamlı konut politikalarına ihtiyaç duyulduğunu gösteriyor.
 
@@ -28,7 +30,9 @@ Bu veriler, İstanbul kira piyasasında kalıcı ve yapısal bir baskının olu�
 
 İstanbul’da kiralardaki hızlı artışın arkasında ekonomik dalgalanmaların yanı sıra nüfus yoğunluğu, kentsel dönüşüm projeleri ve yabancı talebi gibi birden fazla etken bulunuyor. Özellikle Fikirtepe gibi yoğun yapılaşmanın olduğu bölgelerde fiyat artışları daha belirgin şekilde gözlemleniyor; bölgede eski gecekonduların rezidanslara dönüşmesi, kira artışlarını özellikle hızlandıran faktörlerden biri olarak öne çıkıyor. Uzmanlar, bu durumun hem kiracılar hem de ev sahipleri açısından piyasada belirsizlik yarattığını vurguluyor.
 
+<div class="katman-gomme">
 <div class="flourish-embed flourish-photo-slider" data-src="visualisation/26508066"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/26508066/thumbnail" width="100%" alt="photo-slider visualization" /></noscript></div>
+</div><!-- /gomme -->
 
 **Dr. Berat Dağ: "Gençler paylaşımlı konut sistemine zorlanıyor"**
 
@@ -38,7 +42,9 @@ Gençlerin ve beyaz yakalıların, artan kiralar ve yüksek yaşam maliyetleri n
 
 ## İstanbul’da kiralar yükseliyor
 
+<div class="katman-gomme">
 <iframe frameborder="0" height="900" src="https://uploads.knightlab.com/storymapjs/2d930ec11a9a79a96cc139115e913e37/istanbul-daki-en-pahali-semtler/index.html" width="100%" title="Hikâye haritası"></iframe>
+</div><!-- /gomme -->
 
 İstanbul’da konut kiraları son yıllarda hızlı bir yükseliş gösteriyor. Özellikle şehir merkezine yakın, ulaşım olanakları iyi ve sosyal yaşam imkanlarının yoğun olduğu bölgelerde kira fiyatları oldukça yüksek seviyelere ulaşmış durumda ve her yıl düzenli olarak artıyor. Kiralar, konum, güvenlik, çevresel faktörler ve yaşam kalitesi gibi etkenlerden doğrudan etkileniyor. Yoğun talep ve sınırlı konut arzı, özellikle yüksek standartlı konutlarda fiyatları yukarı çekiyor.
 

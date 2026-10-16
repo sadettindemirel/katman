@@ -131,6 +131,13 @@ Adımlar:
 
 Dezavantaj: Her PR'ın base'ini elle değiştirmek gerekir. Öğrenci aynı PR'a sonradan düzeltme eklerse yeniden bakman gerekebilir.
 
+## 5b. Sayfalar ve menü (panelden)
+
+- **Sayfalar** koleksiyonu `content/sayfalar/` klasörüdür. Dosya adı sayfanın adresidir: `hakkinda.md` → `/hakkinda/`. Yeni sayfa açabilir, silebilirsin.
+- **Site ayarları > Site menüsü** `config/_default/menus.yaml` dosyasını düzenler: görünen ad, adres (`/hakkinda/`, `/arsiv/` ya da `https://...`) ve sıra. Yeni bir sayfayı menüde göstermek için buraya ekle.
+- Öğrenciler de bu koleksiyonları görür; onlardan bu dosyalara dokunan bir PR gelirse birleştirme.
+- Sen kaydettiğinde de değişiklik iş akışına (Taslak > İncelemeye hazır > Yayımla) girer; yayımla dediğinde `main`'e birleşir ve build alır.
+
 ## 6. Vitrin ve yarışma işaretleme
 
 Bu bilgiler öğrenci formunda yoktur. Sen GitHub'da düzenlersin. Bu değişiklikleri **toplu yayına dahil et** (bölüm 4, adım 4; ya da ara dal yönteminde bölüm 5, adım 3).
@@ -206,7 +213,7 @@ Her yazı için:
 
 ## 8. Gömme kodu güvenlik kontrol listesi
 
-Site gömme kodlarını filtrelemez; Goldmark'ta ham HTML açıktır (`unsafe: true`). Güvenlik denetimi **senin incelemendir**. Dosyayı Files changed'de açıp gömme kodunu gözle oku.
+Site gömme kodlarını filtrelemez; Goldmark'ta ham HTML açıktır (`unsafe: true`). Panelde gömmeler `<div class="katman-gomme">` … `</div><!-- /gomme -->` sarmalayıcısıyla gelir (editörün **+ > Gömme** bileşeni); sarmalayıcının dışında çıplak HTML görürsen öğrenciden gömmeyi bileşenle eklemesini iste. Panel önizlemesi gömmeleri yalıtılmış bir `data:` çerçevesinde çalıştırır, panel oturumuna erişemez; asıl güvenlik denetimi yine **senin incelemendir**. Güvenlik denetimi **senin incelemendir**. Dosyayı Files changed'de açıp gömme kodunu gözle oku.
 
 **İzin verilen bilinen alan adları** (script src ve iframe src için):
 
@@ -246,6 +253,8 @@ Hugo build sırasında içerik denetimi uyarıları üretir. Netlify > **Deploys
 Hem deploy preview'larda hem production deploy'da bak. Uyarı varsa öğrenciden düzeltme iste, ya da toplu yayından önce kendin düzelt (ama öğrencinin PR'ından geçmek daha temizdir). Uyarılar build'i durdurmaz; yine de yayından önce temizlenmesi iyi olur.
 
 ## 10. Yayından kaldırma
+
+**Panelden silme:** Yazıyı panelde aç, sağ üstteki **Sil** (Delete published entry) düğmesine bas. Bu, `main` dalına doğrudan "Yazı silindi: …" commit'i atar ve bir production build tetikler (yaklaşık 15 kredi). Yalnızca yönetici hesabıyla siteden kaldırır; öğrenci hesabındaki silme yalnızca kendi kopyasını (fork) etkiler. Öğrenciler kendi gönderilmemiş taslaklarını iş akışından silebilir.
 
 Yayından kaldırma, kalıcı adresi etkiler. Yarışmaya gönderilmiş bir yazıda dikkatli ol.
 

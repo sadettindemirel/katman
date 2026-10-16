@@ -1,0 +1,51 @@
+/* Katman — panel ve yeni pencere önizlemesi.
+   Asıl görünüm sitenin kendi stil dosyasından gelir (katman-cms.js ve onizleme.html
+   anasayfadan bulup ekler). Buradakiler önizlemeye özgü parçalar ve stil dosyası
+   yüklenemezse kullanılacak sade bir temel. */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  color: #1f1f1f;
+  background: #fff;
+}
+.main { max-width: 960px; margin: 0 auto; padding: 24px; box-sizing: border-box; }
+.post-content img, .entry-cover img { max-width: 100%; height: auto; }
+.post-content iframe { max-width: 100%; }
+
+.katman-onizleme__arac {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 16px;
+  background: #1f1f1f;
+  color: #fff;
+  font: 500 13px/1.4 system-ui, sans-serif;
+}
+.katman-onizleme__arac button {
+  font: inherit;
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: #b3261e;
+  color: #fff;
+  cursor: pointer;
+}
+.katman-onizleme__arac button:hover { background: #8f1e18; }
+.katman-uyari {
+  max-width: 912px;
+  margin: 16px auto 0;
+  padding: 10px 14px;
+  border-left: 4px solid #b3261e;
+  background: #fbeceb;
+  color: #5c1410;
+  font: 14px/1.5 system-ui, sans-serif;
+}
+.katman-gomme-yer { margin: 24px 0; }
+.katman-gomme-yer:empty { min-height: 40px; background: #f6f4ef; }
+.katman-figur { margin: 24px 0; }
+.katman-figur figcaption { margin-top: 8px; font-size: .875rem; color: #6b6b6b; text-align: center; }

@@ -11,7 +11,7 @@ Bu kılavuz, Katman sitesine yazı göndermek isteyen öğrenciler içindir. Kod
 3. Panele giriş
 4. Yeni yazı oluşturma
 5. Form alanları
-6. Markdown kısa rehberi
+6. Metin editörü
 7. Görsel ekleme
 8. Gömme (embed) ekleme
 9. Kaydetme ve gönderme
@@ -79,7 +79,7 @@ Panelde göreceğin alan adları aşağıdakilerle aynıdır. Zorunlu alanları 
 | **Yayın tarihi** | Evet | Gün.Ay.Yıl ve saat. Yazının yayın tarihi olarak gösterilir. Yayından sonra değişmemeli, çünkü yarışmalarda referans olur. Doğru tarihi seç. |
 | **Kapak görseli** | Hayır | Üç alt alanı var (aşağıda). Görsel eklemezsen bu bölümü boş bırak. |
 | **Konu etiketleri** | Evet | Yazının konusu. Örnek: `iklim`, `deprem`, `ulaşım`. Virgülle ayırarak ya da tek tek ekle. |
-| **Metin** | Evet | Yazının kendisi. Markdown ile yazılır (bölüm 6). |
+| **Metin** | Evet | Yazının kendisi. Word ya da WordPress'teki gibi düğmelerle biçimlendirilir (bölüm 6). |
 | **Veri kaynakları** | Hayır | Metnin altındadır. Yazıda kullandığın verilerin kaynakları; yazının sonunda liste olarak görünür. Aşağıya bak. |
 | **Taslak (yayımlanmasın)** | Hayır | İşaretlersen yazı birleştirilse bile sitede görünmez. Normalde boş bırak. Bunu panelin "Taslak" sütunuyla karıştırma, o ayrı bir şeydir. |
 
@@ -99,26 +99,30 @@ Her veri kaynağı için bir satır ekle:
 
 Metinde kullandığın her rakam bir veri kaynağına dayanmalı. Öğretim üyesi bunu kontrol edecek.
 
-## 6. Markdown kısa rehberi
+## 6. Metin editörü
 
-**Metin** alanı yalnızca "ham" (markdown) modunda çalışır. Yani formatı işaretlerle yazarsın. Düğmelerle biçimlendirme yoktur.
+**Metin** alanı Word ya da WordPress'teki gibi çalışır: yazarsın, biçimlendirmek için metni seçip üstteki düğmelere basarsın. Markdown bilmen gerekmez.
 
-| Ne istiyorsun? | Nasıl yazarsın? |
+| Düğme | Ne yapar? |
 |---|---|
-| Kalın | `**kalın metin**` |
-| Başlık | `## Bölüm başlığı` (başına `##`) |
-| Alt başlık | `### Alt başlık` |
-| Bağlantı | `[görünen metin](https://adres.com)` |
-| Görsel | `![görsel açıklaması](https://görsel-adresi)` |
-| Madde işareti | Satır başına `- ` |
-| Numaralı liste | Satır başına `1. ` |
-| Yeni paragraf | Paragraflar arasında bir boş satır bırak |
+| **B** / *I* | Kalın / italik |
+| Bağlantı simgesi | Seçili metne bağlantı ekler (adres `https://` ile başlamalı) |
+| Başlık (H2, H3) | Bölüm başlığı ve alt başlık. Sayfa başlığı zaten ayrıca gösterilir; yazıyı H2 ile böl. |
+| Alıntı | Alıntı bloğu |
+| Madde / numaralı liste | Liste |
+| **+** | **Görsel** ya da **Gömme** ekler (bölüm 7 ve 8) |
 
 İpuçları:
 
-- Başlıkta `##` kullan. Sayfa başlığı zaten ayrıca gösterilir; metin içinde `#` (tek) kullanma.
-- Bölüm başlığından önce ve sonra boş satır bırak.
-- Bağlantı vereceksen adres `https://` ile başlamalı.
+- Yeni paragraf için Enter'a bas.
+- Word'den ya da Google Docs'tan kopyaladığın metin çoğunlukla biçimiyle gelir. Garip görünürse yapıştırdıktan sonra düğmelerle düzelt.
+- Markdown biliyorsan editörün sağ üstündeki düğmeyle **Markdown** moduna geçip işaretlerle de yazabilirsin. İki mod aynı metni gösterir.
+
+### Önizleme
+
+Editörün sağında yazının sitedeki görünümü durur: başlık, künye, kapak görseli, metin içi görseller ve **gömmeler çalışır halde** görünür. Önizleme görünmüyorsa üstteki göz simgesine (ekran adı farklı olabilir) bas.
+
+Önizlemenin üstündeki **Yeni pencerede aç** düğmesi önizlemeyi ayrı bir sekmede açar. Panelde yazdıkça o sekme de kendiliğinden güncellenir; geniş ekranda ya da ikinci monitörde yazının son halini görmek için kullan.
 
 ## 7. Görsel ekleme
 
@@ -146,19 +150,18 @@ Görselin adresi çoğunlukla `.jpg`, `.png` ya da `.webp` ile biter. Bunu elde 
 ### Görseli nereye yapıştırırsın?
 
 - **Kapak görseli**: Formdaki "Kapak görseli" bölümüne (adres, alternatif metin, kaynak/telif notu).
-- **Metin içi görsel**: `Metin` alanında, ayrı bir satırda, öncesinde ve sonrasında boş satır bırakarak:
+- **Metin içi görsel**: `Metin` alanında görselin geleceği yerde boş bir satıra geç, araç çubuğundaki **+** düğmesine bas ve **Görsel**'i seç. Açılan kutuyu doldur:
+  - **Görsel adresi**: `https://` ile başlayan doğrudan bağlantı.
+  - **Alternatif metin**: Görseli göremeyen biri ne olduğunu bu cümleden anlar. Boş bırakma.
+  - **Görsel altı yazısı / kaynak**: Görselin altında görünür. Örnek: `Fotoğraf: Ad Soyad, CC BY 4.0`.
 
-```
-![Mahalle bazında kira artışını gösteren harita](https://upload.wikimedia.org/ornek/gorsel.jpg)
-```
-
-Köşeli parantezin içi görselin **alternatif metnidir**. Boş bırakma. Görseli göremeyen biri ne olduğunu bu cümleden anlar.
+Görsel hemen sağdaki önizlemede görünür. Görünmüyorsa adres doğrudan görsel bağlantısı değildir (yukarıya bak).
 
 ### Telif ve kaynak
 
 - İzin vermeyen birinin görselini kullanma. İnternette bulduğun her görsel serbest değildir.
 - Lisansı kontrol et ve yazarın istediği biçimde kaynak göster. Örnek: `Fotoğraf: Ad Soyad, CC BY 4.0, Wikimedia Commons`.
-- Metin içi görselin kaynağını görselin altına yazı olarak ekle (örneğin italik bir satır).
+- Metin içi görselin kaynağını **Görsel altı yazısı / kaynak** alanına yaz.
 - Görseli barındıran site görseli silerse yazında görsel kırık görünür. Önemli görseller için güvenilir bir yer seç.
 
 ## 8. Gömme (embed) ekleme
@@ -168,24 +171,17 @@ Grafik, harita, zaman çizelgesi ya da video gibi etkileşimli içerikleri "göm
 ### Genel kural
 
 1. Aracın gömme kodunu kopyala (aşağıda araç araç anlatılıyor).
-2. `Metin` alanında göstermek istediğin yere git.
-3. **Ayrı bir satıra** yapıştır. Öncesinde ve sonrasında **boş satır** bırak.
-4. Kodu **olduğu gibi** bırak. Değiştirme, kısaltma, parçalara bölme.
+2. `Metin` alanında göstermek istediğin yerde boş bir satıra geç.
+3. Araç çubuğundaki **+** düğmesine bas ve **Gömme (iframe / embed kodu)**'nu seç.
+4. Açılan kutuya kodu **olduğu gibi** yapıştır. Değiştirme, kısaltma, parçalara bölme.
 
-Örnek:
-
-```
-Aşağıdaki grafikte son beş yılın değişimi görülüyor.
-
-<iframe title="Kira artışı" src="https://datawrapper.dwcdn.net/ABCDE/1/" width="100%" height="400" frameborder="0"></iframe>
-
-Grafikten görüldüğü gibi...
-```
+Gömme, sağdaki önizlemede çalışır halde görünür (grafik birkaç saniyede yüklenebilir). Sonradan değiştirmek ya da silmek için kutunun kendisini kullan.
 
 Notlar:
 
-- Kod bir `<iframe>` olabilir, bazen yanında bir `<script>` satırı da olur. İkisini de birlikte yapıştır.
-- Kod olduğu gibi çalışır. Panelin önizlemesi güvenlik nedeniyle iframe'leri göstermeyebilir. **Bu bir hata değildir.** Gerçek görünümü, gönderdikten sonra öğretim üyesinin açtığı deploy preview'da (önizleme sitesinde) görürsün. Gerekirse ona sor.
+- Kodu **metnin içine doğrudan yapıştırma**; editör onu düz yazı sanar ve sitede kod olarak görünür. Her zaman **+ > Gömme** kullan.
+- Kod bir `<iframe>` olabilir, bazen yanında bir `<script>` satırı da olur. İkisini de aynı kutuya birlikte yapıştır.
+- Önizleme güvenlik için gömmeyi yalıtılmış bir çerçevede çalıştırır. Çok nadiren bir araç önizlemede görünmeyebilir; sitedeki asıl görünümü gönderdikten sonra açılan önizleme sitesinde (deploy preview) görürsün.
 - Yalnızca tanınmış araçların kodunu kullan. Tanımadığın bir siteden aldığın kodu yapıştırma.
 - Gömmenin altına ya da üstüne grafiğin ne anlattığını bir cümleyle yaz. Okurların hepsi etkileşimli içeriği kullanamayabilir.
 
@@ -267,8 +263,9 @@ Göndermeden önce son kontrol listesi:
 - Tarayıcı eklentilerini (reklam engelleyici vb.) bu site için kapatmayı dene.
 
 **Gömme kodunu yapıştırdım ama önizlemede görünmüyor.**
-- Panel güvenlik nedeniyle iframe'leri göstermeyebilir. Hata değildir. Gerçek görünümü deploy preview'da görürsün.
-- Kodu tam kopyaladığından ve boş satırlarla ayrı bir satıra yapıştırdığından emin ol.
+- Kodu **+ > Gömme** kutusuna mı yapıştırdın? Metnin içine doğrudan yapıştırılan kod düz yazı olarak kalır.
+- Kodu tam kopyaladığından emin ol (`<iframe ...></iframe>` ya da `<div ...><script ...></script></div>` tamamı).
+- Birkaç saniye bekle; bazı araçlar geç yüklenir. Yine görünmüyorsa asıl görünümü deploy preview'da kontrol et.
 
 **Özet alanı kırmızı.**
 - 200 karakteri aştın. Kısalt.

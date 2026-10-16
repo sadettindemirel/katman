@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Taslak önizleme — Katman</title>
+  <link rel="icon" href="/favicon.svg">
+  <link rel="stylesheet" href="/admin/onizleme.css">
+  <script src="/admin/katman-gomme.js"></script>
+</head>
+<body>
+  <!-- Panelde (Decap) açık olan taslağın canlı önizlemesi. Panel, önizlemeyi bu
+       tarayıcının yerel deposuna yazar; bu sayfa değişiklikleri dinleyip yalnızca
+       değişen parçaları günceller (gömmeler gereksiz yere yeniden yüklenmez). -->
+  <div class="katman-onizleme__arac">
+    <span id="durum">Taslak önizleme</span>
+    <button type="button" onclick="window.close()">Kapat</button>
+  </div>
+  <div id="icerik"><main class="main"><p>Önizlenecek taslak yok. Panelde bir yazı açıp önizleme alanındaki
+    <strong>Yeni pencerede aç</strong> düğmesine bas.</p></main></div>
+
+  <script>
+  (function () {
+    'use strict';
+    var ANAHTAR = 'katman-onizleme';
+    var icerik = document.getElementById('icerik');
+    var durum = document.getElementById('durum');
+    var sonZaman = 0;
+
+    KatmanGomme.yukseklikDinle(window);
+
+    // Sitenin gerçek stil dosyası
+    fetch('/').then(function (r) { return r.ok ? r.text() : ''; }).then(function (html) {
+      var m = html.match(/<link[^>]+href="([^"]*\/stylesheet[^"]*\.css)"/);
+      if (!m) return;
+      var l = document.createElement('link');
+      l.rel = 'stylesheet';
+      l.href = m[1];
+      document.head.insertBefore(l, document.head.querySelector('link[href="/admin/onizleme.css"]'));
+    }).catch(function () {});
+
+    function ozellikler(el) {
+      var a = [];
+      for (var i = 0; i < el.attributes.length; i++) {
+        var at = el.attributes[i];
+        if (at.name !== 'data-hazir') a.push(at.name + '=' + at.value);
+      }
+      return a.sort().join('\u0000');
+    }
+
+    // Canlı DOM'u yenisine benzetir; aynı kalan düğümlere (gömmeler, görseller) dokunmaz.
+    function esitle(eski, yeni) {
+      var e = Array.prototype.slice.call(eski.childNodes);
+      var y = Array.prototype.slice.call(yeni.childNodes);
+      for (var i = 0; i < Math.max(e.length, y.length); i++) {
+        var a = e[i], b = y[i];
+        if (!b) { eski.removeChild(a); continue; }
+        if (!a) { eski.appendChild(b); continue; }
+        if (a.nodeType !== b.nodeType || a.nodeName !== b.nodeName) { eski.replaceChild(b, a); continue; }
+        if (a.nodeType !== 1) { if (a.nodeValue !== b.nodeValue) a.nodeValue = b.nodeValue; continue; }
+        if (ozellikler(a) !== ozellikler(b)) { eski.replaceChild(b, a); continue; }
+        if (a.classList.contains('katman-gomme-yer')) continue;
+        esitle(a, b);
+      }
+    }
+
+    function goster() {
+      var veri;
+      try { veri = JSON.parse(localStorage.getItem(ANAHTAR) || 'null'); } catch (e) { veri = null; }
+      if (!veri || !veri.html || veri.zaman === sonZaman) return;
+      sonZaman = veri.zaman;
+      // İçerik, Decap'in temizleyicisinden geçmiş önizleme DOM'udur; gömme kodları
+      // yalnızca data-kod içinde taşınır ve yalıtılmış çerçevede çalışır.
+      var t = document.createElement('template');
+      t.innerHTML = '<main class="main">' + veri.html + '</main>';
+      var yeniMain = t.content.firstChild;
+      var main = icerik.querySelector('main.main[data-dolu]');
+      if (!main) {
+        yeniMain.setAttribute('data-dolu', '');
+        icerik.replaceChildren(yeniMain);
+      } else {
+        esitle(main, yeniMain);
+      }
+      KatmanGomme.yerlestir(icerik);
+      document.title = (veri.baslik || 'Taslak') + ' — önizleme';
+      durum.textContent = 'Taslak önizleme · son güncelleme ' +
+        new Date(veri.zaman).toLocaleTimeString('tr-TR') + ' · panelde yazdıkça güncellenir';
+    }
+
+    window.addEventListener('storage', function (e) { if (e.key === ANAHTAR) goster(); });
+    goster();
+  })();
+  </script>
+</body>
+</html>

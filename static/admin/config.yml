@@ -21,7 +21,9 @@ publish_mode: editorial_workflow
 locale: tr
 site_url: https://katmanlar.netlify.app
 display_url: https://katmanlar.netlify.app
-logo_url: /admin/katman-logo.svg
+logo:
+  src: /admin/katman-logo.svg
+  show_in_header: true
 
 # Decap bu ayarı zorunlu tutuyor. Görseller harici barındırılır (URL ile eklenir);
 # bu klasöre yüklenen dosyalar PR incelemesinde reddedilir.
@@ -39,7 +41,10 @@ collections:
     description: "Vize ve final çalışmaların. Zorunlu alanları doldurmadan gönderemezsin."
     folder: content/yazilar
     create: true
-    delete: false
+    # Silme açık. Yayımlanmış bir yazıyı siteden gerçekten kaldıran yalnızca yönetici
+    # hesabıdır (main dalına doğrudan "Yazı silindi" commit'i). Öğrenciler kendi
+    # gönderilmemiş taslaklarını silebilir.
+    delete: true
     # Dosya adı = kalıcı adres. Yayından sonra değiştirilmez.
     slug: "{{year}}-{{slug}}"
     preview_path: "yazilar/{{slug}}/"
@@ -130,10 +135,15 @@ collections:
       - label: Metin
         name: body
         widget: markdown
-        # Yalnızca ham (markdown) mod: yapıştırılan gömme kodları (iframe/script) bozulmadan saklanır.
-        modes: [raw]
-        # Görsel yükleme bileşeni kapalı; görseller ![açıklama](https://...) ile eklenir.
-        editor_components: []
+        hint: "Düğmelerle biçimlendir. Görsel ve gömme (Flourish, Datawrapper, iframe...) eklemek için araç çubuğundaki + düğmesini kullan. Markdown biliyorsan sağ üstten Markdown moduna geçebilirsin."
+        # Zengin metin (WordPress benzeri) varsayılan; markdown bilen için ham mod da açık.
+        modes: [rich_text, raw]
+        buttons: [bold, italic, link, heading-two, heading-three, quote, bulleted-list, numbered-list]
+        # "image" ve "gomme" static/admin/katman-cms.js içinde tanımlı: görsel yalnızca
+        # adresle eklenir (yükleme yok), gömme kodu sitede olduğu gibi çalışır.
+        editor_components: [image, gomme]
+        # Güvenlik için açık kalmalı: gömmeler önizlemede yalıtılmış çerçevede çalışır,
+        # metne elle yazılmış HTML ise temizlenir (bkz. katman-gomme.js).
         sanitize_preview: true
 
       # --- Veri kaynakları (metnin altında) ---
@@ -164,6 +174,64 @@ collections:
         default: false
         required: false
         hint: "İşaretliyse yazı birleştirilse bile sitede görünmez."
+
+  # --- Yönetici: site sayfaları ve menü ---
+  # Öğrenciler de görür; onların buradaki değişiklikleri PR olarak gelir, birleştirmeyin.
+  - name: sayfalar
+    label: Sayfalar
+    label_singular: Sayfa
+    description: "Hakkında gibi site sayfaları (yalnızca yönetici). Yeni sayfayı menüye eklemek için Site menüsü'nü kullan."
+    folder: content/sayfalar
+    create: true
+    delete: true
+    # Dosya adı = adres: content/sayfalar/hakkinda.md → /hakkinda/
+    slug: "{{slug}}"
+    preview_path: "{{slug}}/"
+    fields:
+      - label: Başlık
+        name: title
+        widget: string
+      - label: Kısa açıklama
+        name: description
+        widget: string
+        required: false
+        hint: "Arama motorları ve paylaşım kartları için tek cümle."
+      - label: Metin
+        name: body
+        widget: markdown
+        modes: [rich_text, raw]
+        buttons: [bold, italic, link, heading-two, heading-three, quote, bulleted-list, numbered-list]
+        editor_components: [image, gomme]
+        sanitize_preview: true
+
+  - name: site
+    label: Site ayarları
+    description: "Yalnızca yönetici."
+    editor:
+      preview: false
+    files:
+      - name: menu
+        label: Site menüsü
+        file: config/_default/menus.yaml
+        fields:
+          - label: Ana menü
+            name: main
+            widget: list
+            summary: "{{fields.weight}} · {{fields.name}} → {{fields.url}}"
+            fields:
+              - label: Görünen ad
+                name: name
+                widget: string
+              - label: Adres
+                name: url
+                widget: string
+                hint: "Site içi: /hakkinda/ (Sayfalar'daki dosya adı), /arsiv/, /ara/. Dış bağlantı: https://..."
+                pattern: ['^(/[a-z0-9/-]*|https://\S+)$', "/hakkinda/ ya da https://... biçiminde olmalı."]
+              - label: Sıra
+                name: weight
+                widget: number
+                value_type: int
+                hint: "Küçük sayı solda görünür (10, 20, 30...)."
 
 # Vitrin ve yarışma bilgileri öğrenci formunda yoktur; yönetici
 # data/vitrin.yaml ve data/yarismalar.yaml dosyalarını GitHub'da düzenler.

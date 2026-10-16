@@ -18,7 +18,9 @@ draft: false
 
 **Türkiye’yi derinden sarsan ve asrın felaketi olarak adlandırılan Kahramanmaraş merkezli depremlerin üzerinden bir buçuk yıl geçti. Bölgedeki 11 ili etkisi altına alan ve büyük bir yıkıma yol açan 7.7 ve 7.6 şiddetindeki depremlerin ardından Türkiye tek vücut oldu ve yaraları sarmaya çalıştı. Depremin ardından ülkede bir haftalık milli yas ilan edildi.  Depremin yıkıcı etkisi nedeniyle bölgede amansız mücadele verildi. AFAD, UMKE, AKUT ekipleri ve çeşitli sivil toplum kuruluşlarının da desteğiyle enkazların altında kalan birçok can sağ olarak çıkarıldı.  İçişleri Bakanı Ali Yerlikaya, 6 Şubat depreminin yıl dönümünde 53 bin 537 kişinin hayatını kaybettiğini açıkladı.**
 
+<div class="katman-gomme">
 <iframe frameborder="0" height="800" src="https://uploads.knightlab.com/storymapjs/8af2027307aae4542d4c40e7d396449b/kaybolan-sehirlerin-ardinda-6-subat/draft.html" width="100%" title="Hikâye haritası"></iframe>
+</div><!-- /gomme -->
 
 ## ‘Yüzyılın felaketi’
 
@@ -26,7 +28,9 @@ draft: false
 
 İçişleri Bakanlığı, 2023 mart ayında depreme ilişkin bir veri yayınladı. Veride şubat ayında depremde kurulan çadır kentlerin sayısı ortaya konuldu. Açıklanan verilere göre 332 çadır kent ve beraberinde 209 konteyner kentin kurulduğu şehirlerde, Hatay'da 101 bin 168, Kahramanmaraş'ta 81 bin 216, Gaziantep'te 49 bin 795, Adıyaman'da 50 bin 763, Malatya'da 39 bin 871, Adana'da 17 bin 515, Şanlıurfa'da 8 bin 990, Osmaniye'de 8 bin 602, Diyarbakır'da 7 bin 458, Kilis'te 4 bin 624 ve Elazığ'da 480 olmak üzere 370 bin 482 çadırın kurulumunun yapıldığı belirtildi.
 
+<div class="katman-gomme">
 <iframe class="juxtapose" frameborder="0" height="400" scrolling="no" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=01ac0d66-11e6-11ef-9396-d93975fe8866" width="100%" title="Önce-sonra karşılaştırması"></iframe>
+</div><!-- /gomme -->
 
 ### **Tüm televizyon kanalları yaraları sarmak için tek ses, tek yürek oldu**
 
@@ -36,7 +40,9 @@ draft: false
 
 6 Şubat’ta yaşanan depremin ardından saat 04.17’de duran Adıyaman’daki saat kulesi depremin sembol fotoğraflarından biri haline geldi. Depremin üzerinden geçen bir buçuk yıllık sürede saat kulesinin akrep ve yelkovanı ilerlemedi.  45 yıl önce inşa edilen saat kulesi şehirde kalıcı anıt yapıldı. UNESCO Tarihi Miraslar Listesi’nde yer alan Diyarbakır Surları, Adıyaman Ulu Cami, Gaziantep Kalesi, Hatay Meclisi de depremde hasar alan tarihi yapıtlar arasında yer aldı.
 
+<div class="katman-gomme">
 <iframe class="juxtapose" frameborder="0" height="400" scrolling="no" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=e73410ae-37b6-11ef-9396-d93975fe8866" width="100%" title="Önce-sonra karşılaştırması"></iframe>
+</div><!-- /gomme -->
 
 Bu haber kapsamında Türk Jeolog ve deprem bilimci **Prof.Dr. Naci Görür** ile konuştuk. 
 
@@ -44,13 +50,17 @@ Bu haber kapsamında Türk Jeolog ve deprem bilimci **Prof.Dr. Naci Görür** il
 
 Türkiye’nin deprem kuşağında yer alan bir ülke olduğunu söyleyen Görür, “Türkiye’deki depremler 13,6 milyon seneden beri yaşanmaya devam ediyor. Daha da yaşanmaya devam edecek. Dolayısıyla bizim gibi ülkeler sürekli bu depremlerle karşı karşıya kalacak.  Depremlerin nerede, nasıl olacağı üzerinde durmaktan çok biz ülkemizi depreme nasıl hazırlarız,  deprem direnişli bir ülke nasıl oluruz diye bakmamız lazım.  Dünyada bunu başarmış Çin, Hindistan, Şili, Japonya gibi birçok ülke ve eyalet var” şeklinde konuştu.
 
+<div class="katman-gomme">
 <iframe class="juxtapose" frameborder="0" height="400" scrolling="no" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=bf90b86c-3195-11ef-9396-d93975fe8866" width="100%" title="Önce-sonra karşılaştırması"></iframe>
+</div><!-- /gomme -->
 
 **“6 Şubat depremlerinde yıkımın önüne geçebilirdik”**
 
 6 Şubat 2023 tarihinde yaşanan depremde önlem alınsaydı yıkımın önüne geçilebileceğini kaydeden Naci Görür, “Deprem yaşandığında az hasar görebilecek, depreme karşı dirençli binalar yapmak gerekli.  Aynı zamanda yapı stokunun da elden geçirilmesi gerekli.  Binalarda gerekli süspansiyonlar ve elastik malzemeyi kullanırsan, yüksek malzeme yapmazsan, zemin etüdü yapmayı önceliğine alıp malzemeden çalıp çırpmazsan, gerekli hesapları da yaparsan büyük ölçüde binalar yıkılmaz. Bizim burada derdimiz bir binanın, sahibini depremden sağ bir şekilde çıkarmasını sağlamasıdır.  Bunu yapan bina görevini yapmış demektir.  Yoksa her bina hasar görür.  Binalarda yanlış bir şey var ki depremlerde ağır yıkımlar yaşanıyor. Biz ülke olarak, binanın iskânını bilmediğimiz için, bilim dışı işler yaptığımız için yıkımlar oluyor” dedi.
 
+<div class="katman-gomme">
 <iframe class="flourish-embed-iframe" frameborder="0" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" scrolling="no" src="https://flo.uri.sh/visualisation/18617222/embed" style="width:100%;height:600px;" title="Interactive or visual content"></iframe>
+</div><!-- /gomme -->
 
 [![Made with Flourish](https://public.flourish.studio/resources/made_with_flourish.svg)](https://public.flourish.studio/visualisation/18617222/?utm_source=embed&utm_campaign=visualisation/18617222)
 
@@ -79,7 +89,9 @@ Depremin üzerinden geçen 1 buçuk senede dernek olarak deprem kayıplarının 
 
 Dernek Başkanı Kaban, “Malatya’da Gezer ailesi var, resmi kayıtlara göre aileden Uğur Gezer isimli tek bir kişi kayıp,  Kendisi engelli bir vatandaşımız. Kafe tarzı bir işletmede çalışıyordu. Bina yıkılınca tek o kayboldu. Annesi, her gün yıkılan o binaya gidip oğlum gelecek diye bekliyor. Kahramanmaraş’ta Buket sitesinde Afrikalı, Özbekistanlı ve Türk öğrenciler kayıp. Gaziantep’te İrem Nur Karaca kayıp. Canlı olduğu görülmüş ancak bulunamadı. Merve Ateş, enkazın altından çıkarıldı.  Enkazın altından çıkarıldıktan sonra ayağında sadece yara vardı. Birinci günde ailesini tanıyordu. Merve Ateş ambulansa bindirildikten sonra kendisinden hiçbir şekilde haber alınamadı. Aileler çok perişan durumdalar. Bu durumda olan 145 aile var” ifadelerini kullandı.
 
+<div class="katman-gomme">
 <iframe class="juxtapose" frameborder="0" height="400" scrolling="no" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=772e5370-316f-11ef-9396-d93975fe8866" width="100%" title="Önce-sonra karşılaştırması"></iframe>
+</div><!-- /gomme -->
 
 **“İnsanlar kayıpları için öldüklerini biliyorum ama bir mezar taşı olsun istiyorum diyor”**
 

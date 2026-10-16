@@ -18,8 +18,12 @@ Tema dosyalarına dokunulmaz. Değişiklikler sitenin kendi `layouts/`, `assets/
 | Yol | İçerik |
 |---|---|
 | `content/yazilar/` | Öğrenci yazıları (dosya adı = kalıcı adres) |
+| `content/sayfalar/` | Hakkında gibi sayfalar, kök adreste yayımlanır (`/hakkinda/`) |
+| `config/_default/menus.yaml` | Ana menü (panelde Site ayarları > Site menüsü) |
 | `data/vitrin.yaml`, `data/yarismalar.yaml` | Vitrin ve yarışma bilgileri (yalnızca yönetici) |
 | `static/admin/config.yml` | Decap CMS form alanları |
+| `static/admin/katman-cms.js`, `katman-gomme.js` | Editörün Görsel/Gömme düğmeleri, önizleme şablonları |
+| `static/admin/onizleme.html` | Yeni pencerede canlı taslak önizlemesi |
 | `layouts/_partials/katman/` | Künye, araştırma notu, kart, içerik denetimi |
 | `docs/` | Kılavuzlar |
 

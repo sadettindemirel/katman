@@ -218,3 +218,16 @@
 .post-content iframe { width: 100%; display: block; margin: 24px 0; }
 .post-content .flourish-embed,
 .post-content [class*="juxtapose"] { max-width: 100%; }
+
+/* Logo: başlıkta sitenin adının yanında (layouts/_partials/katman/logo.html) */
+.logo a { display: inline-flex; align-items: center; gap: 8px; }
+.katman-logo { flex: none; width: 28px; height: 28px; color: var(--primary); }
+
+/* Metin içi altyazılı görsel (layouts/_markup/render-image.html) */
+.katman-figur { margin: 24px 0; }
+.katman-figur img { margin: 0 auto; }
+.katman-figur figcaption { margin-top: 8px; font-size: .875rem; color: var(--secondary); text-align: center; }
+
+/* Decap "Gömme" bileşeninin sarmalayıcısı */
+.katman-gomme { margin: 24px 0; }
+.katman-gomme iframe { max-width: 100%; }

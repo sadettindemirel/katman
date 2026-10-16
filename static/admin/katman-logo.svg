@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Katman"><rect width="120" height="120" rx="16" fill="#b3261e"/><g fill="#fff"><rect x="24" y="30" width="72" height="12" rx="3"/><rect x="24" y="54" width="72" height="12" rx="3" opacity=".8"/><rect x="24" y="78" width="72" height="12" rx="3" opacity=".6"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 236 64" role="img" aria-label="Katman">
+  <defs>
+    <mask id="u" maskUnits="userSpaceOnUse"><rect width="48" height="48" fill="#fff"/><path d="M24 3 44 13 24 23 4 13Z" stroke="#000" stroke-width="5" stroke-linejoin="round"/></mask>
+    <mask id="o" maskUnits="userSpaceOnUse"><rect width="48" height="48" fill="#fff"/><path d="M24 16 44 26 24 36 4 26Z" stroke="#000" stroke-width="4" stroke-linejoin="round"/></mask>
+  </defs>
+  <g transform="translate(1 4) scale(1.15)">
+    <path d="M24 25 44 35 24 45 4 35Z" fill="#1f1f1f" mask="url(#o)"/>
+    <path d="M24 16 44 26 24 36 4 26Z" fill="none" stroke="#1f1f1f" stroke-width="1.8" stroke-linejoin="round" mask="url(#u)"/>
+    <path d="M24 3 44 13 24 23 4 13Z" fill="#b3261e"/>
+  </g>
+  <text x="66" y="38" fill="#1f1f1f" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700" letter-spacing="-.5">Katman</text>
+  <text x="67.5" y="54" fill="#6b6b6b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.2" letter-spacing="1.6">VERİ HİKÂYELERİ</text>
+</svg>

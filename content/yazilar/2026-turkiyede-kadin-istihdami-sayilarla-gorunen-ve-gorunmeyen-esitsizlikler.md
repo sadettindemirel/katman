@@ -20,13 +20,17 @@ draft: false
 
 Son yıllarda kadınların eğitim seviyesinin artması, üniversite mezunu kadın sayısındaki yükseliş ve kentleşme oranlarının büyümesine rağmen, bu gelişmeler kadın istihdamına aynı ölçüde yansımamıştır. Kadınlar hâlâ erkeklere kıyasla daha düşük oranlarda işgücüne katılmakta, daha düşük ücretlerle çalışmakta ve karar alma mekanizmalarında daha sınırlı temsil edilmektedir. 
 
+<div class="katman-gomme">
 <div class="flourish-embed flourish-chart" data-src="visualisation/27060886"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27060886/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+</div><!-- /gomme -->
 
 Türkiye’de işgücüne katılım oranları cinsiyete göre incelendiğinde, [son 10 yılda kadın ve erkekler arasındaki farkın belirgin biçimde devam ettiği görülüyor.](http://data.tuik.gov.tr/Bulten/Index?p=Istatistiklerle-Kadin-2024-54076&utm_source) Erkeklerin işgücüne katılım oranı 2014–2024 döneminde genel olarak %70–72 bandında seyrederken, kadınların işgücüne katılım oranı aynı dönemde daha düşük bir seviyede kalmış olsa da kademeli bir artış gösterdi. [Kadınların işgücüne katılım oranı](https://istib.org.tr/resim/siteici/files/616_%C4%B0%C5%9Fg%C3%BCc%C3%BC%20%C4%B0statistikleri%2C%202024%20.pdf?utm_source) 2014 yılında yaklaşık %29,9 iken, 2024 itibarıyla %36,4 aralığına yükseldi. 
 
 Bu artışa rağmen, kadınların işgücüne katılımı erkeklerin yaklaşık yarısı düzeyinde kalmaya devam ediyor. Özellikle [2020 yılında COVID-19 salgınının etkisiyle](https://istib.org.tr/resim/siteici/files/616_%C4%B0%C5%9Fg%C3%BCc%C3%BC%20%C4%B0statistikleri%2C%202024%20.pdf?utm_source) hem kadın hem de erkeklerde işgücüne katılım oranlarında düşüş yaşanırken, bu gerilemenin kadınlar üzerinde daha belirgin olduğu dikkat çekti. Salgın sonrası dönemde kadınların işgücüne katılımında toparlanma görülse de, veriler Türkiye’de cinsiyet temelli yapısal eşitsizliklerin sürdüğünü ortaya koyuyor. 
 
+<div class="katman-gomme">
 <div class="flourish-embed flourish-chart" data-src="visualisation/27073100"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27073100/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+</div><!-- /gomme -->
 
 ## İstihdamda cinsiyet makası: Denge çok uzaklarda
 
@@ -36,7 +40,9 @@ Bu artışa rağmen, kadınların işgücüne katılımı erkeklerin yaklaşık 
 
 Kadınların istihdam edilmesi, ekonomik eşitliğin sağlandığı anlamına gelmemektedir. Türkiye’de kadın ve erkek arasındaki ücret farkı, tüm eğitim seviyelerinde erkekler lehine seyretmektedir. 
 
+<div class="katman-gomme">
 <div class="flourish-embed flourish-chart" data-src="visualisation/27061030"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27061030/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+</div><!-- /gomme -->
 
 Türkiye’de yükseköğretim mezunları arasında [kadın ve erkekler arasındaki ücret farkı](https://www.tuik.gov.tr/media/announcements/istatistiklerle_kadın2024.pdf) son 10 yılda belirgin biçimde artış gösterdi. 2014 yılında yaklaşık %8 seviyesinde olan cinsiyete dayalı ücret farkı, 2018 itibarıyla %10’a yükselirken, 2019 ve 2020 yıllarında hızlanarak %11 ve %13 seviyelerine çıktı. Pandemi sonrası dönemde artış daha da belirginleşti; 2021’de ücret farkı %16’ya, 2022’de %17,1’e yükseldi. 2023 ve 2024 yıllarında ise sınırlı artış sürerek fark sırasıyla %17,4 ve %17,5 seviyelerine ulaştı. Veriler, yükseköğretim mezunu olmanın kadınlar açısından ücret eşitsizliğini ortadan kaldırmadığını, aksine son yıllarda cinsiyete dayalı ücret farkının derinleştiğini ortaya koyuyor. 
 
@@ -44,7 +50,9 @@ Türkiye’de yükseköğretim mezunları arasında [kadın ve erkekler arasınd
 
 Kadın istihdamının sektörel dağılımı, ekonomik cinsiyet eşitsizliğinin en görünür ve somut alanlarından birini oluşturmaktadır. [ISTIB verileri](https://istib.org.tr/resim/siteici/files/616_%C4%B0%C5%9Fg%C3%BCc%C3%BC%20%C4%B0statistikleri%2C%202024%20.pdf?utm_source=), kadınların ağırlıklı olarak hizmet ve tarım sektörlerinde istihdam edildiğini, buna karşın sanayi sektöründe sınırlı düzeyde temsil edildiklerini ortaya koymaktadır. Kadınların sektörel dağılımı incelendiğinde, istihdamın yaklaşık %31–33,4’inin tarım sektöründe, %50’nin üzerindeki kısmının hizmet sektöründe yoğunlaştığı, sanayi sektöründeki payın ise %15’in altında kaldığı görülmektedir. Bu tablo, kadın emeğinin çoğunlukla düşük ücretli, güvencesiz ve kariyer ilerleme olanaklarının sınırlı olduğu alanlarda yoğunlaştığını; teknik ve üretim odaklı sektörlerde ise cinsiyet temelli yapısal engellerin devam ettiğini göstermektedir. 
 
+<div class="katman-gomme">
 <div class="flourish-embed flourish-chart" data-src="visualisation/27061226"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27061226/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+</div><!-- /gomme -->
 
 Bu dağılım, kadınların daha düşük ücretli, güvencesiz ve kariyer ilerleme imkânlarının sınırlı olduğu alanlarda yoğunlaştığını göstermektedir. Özellikle tarım sektöründe çalışan kadınların büyük bir bölümü ücretsiz aile işçisi konumundadır. 
 
@@ -56,11 +64,15 @@ Kadınların çalışma biçimleri, erkeklerden belirgin biçimde farklılaşmak
 
 Kadınların ekonomik hayata katılımında girişimcilik önemli bir alternatif olarak görülmektedir.[TUİK verilerine göre](https://veriportali.tuik.gov.tr/api/tr/data/downloads?t=r&p=vKt6%2BRlPgJZ3r%2FP9WkZrnmvz7YaHwkMcGLQfAv1rcVi9QgPgT%2Bm7dBkUhMW%2FrUwJlhtYcdNCFBVFl2DiM74PMb%2FPi5FiPL%2BfwvKyHGfFd4SNWQy3hPg1U2Rttb9HSw49lVrypi4kFmg5D8A5XSrMuQ%3D%3D) kadın girişimcilerin toplam girişimciler içindeki payı %18,2, erkek girişimcilerin payı ise %81,8’dir. 
 
+<div class="katman-gomme">
 <div class="flourish-embed flourish-chart" data-src="visualisation/27073453"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27073453/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+</div><!-- /gomme -->
 
 Girişimcilik alanında cinsiyetler arasındaki dağılım son 10 yılda kadınlar lehine kademeli bir değişim gösterse de erkeklerin belirgin üstünlüğü devam ediyor. 2014 yılında girişimcilerin yalnızca %10,1’ini oluşturan kadınlar, yıllar içinde istikrarlı bir artış kaydederek 2019’da %13,1’e, 2021’de %15’e yükseldi. Pandemi sonrası dönemde ivme kazanan [bu artış, 2023’te %17’ye](https://cdn.istanbul.edu.tr/FileHandler2.ashx?f=i%CC%87statistiklerle-kadin-giris%CC%A7imcilig%CC%86i_hakan-bektas%CC%A7_638473985867386221.pdf), 2024’te ise %18,2’ye ulaştı. Aynı dönemde erkek girişimci oranı %89,9’dan %81,8’e geriledi. Veriler, kadın girişimciliğinin son on yılda güçlendiğini ortaya koyarken, girişimcilik ekosisteminde hâlen belirgin bir cinsiyet dengesizliğinin sürdüğüne işaret ediyor. 
 
+<div class="katman-gomme">
 <iframe aria-label="Choropleth map" data-external="1" frameborder="0" height="369" id="datawrapper-chart-U39YF" scrolling="no" src="https://datawrapper.dwcdn.net/U39YF/1/" style="width: 100%; min-width: 100% !important; border: none;" title="Dünya'da kadınların işgücüne katılım oranları(2024)"></iframe><script type="text/javascript"> window.addEventListener("message", function(a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r, i = 0; r = e[i]; i++) if (r.contentWindow === a.source) { var d = a.data["datawrapper-height"][t] + "px"; r.style.height = d; } } }); </script>
+</div><!-- /gomme -->
 
 [Our World in Data](https://ourworldindata.org/grapher/female-labor-force-participation-rates?country=TUR~OWID_WRL~OWID_UMC~WB_ECA) verilerine göre kadınların işgücüne katılım oranlarının ülkeler arasında ciddi farklılıklar gösterdiğini ortaya koyarken, Türkiye’nin bu alanda küresel ölçekte geride kalan ülkeler arasında yer aldığını gösteriyor. Görselleştirmeye göre Türkiye’de kadınların işgücüne katılım oranı yaklaşık %36,3 bandında seyrederek hem dünya ortalamasının hem de Avrupa ve Orta Asya bölgesindeki pek çok ülkenin altında kalıyor. Harita, Kuzey Avrupa ülkeleri başta olmak üzere gelişmiş ekonomilerde kadınların işgücüne katılımının %60’ın üzerine çıktığını, buna karşılık Türkiye gibi ülkelerde kadın emeğinin büyük ölçüde ekonomik sistemin dışında kaldığını gözler önüne seriyor. 
 
