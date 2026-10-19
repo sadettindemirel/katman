@@ -30,6 +30,7 @@
                     {{ site.Params.label.iconSVG | safeHTML }}
                 {{- end -}}
                 {{- $label_text -}}
+                {{- with site.Params.slogan }}<span class="katman-slogan">{{ . }}</span>{{ end }}
             </a>
             {{- end }}
 

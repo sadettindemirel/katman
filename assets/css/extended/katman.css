@@ -1,13 +1,44 @@
-/* Katman — tema üzerine eklenen stiller (PaperMod assets/css/extended/ altını otomatik birleştirir) */
+/* Katman — "Veri defteri" görünümü. PaperMod assets/css/extended/ altını otomatik birleştirir.
+   Renkler PaperMod'un kendi değişkenlerinin üzerine yazılır; böylece temanın bütün parçaları
+   (arama, etiketler, sayfalama) aynı paleti kullanır. Yazı tipleri: fontlar.css. */
 
 :root {
-  --katman-vurgu: #b3261e;
-  --katman-kutu: #f6f4ef;
+  --radius: 2px;
+  --theme: #f4f6f8;
+  --entry: #ffffff;
+  --primary: #121826;
+  --secondary: #5b6577;
+  --tertiary: #d9dee6;
+  --content: #1f2633;
+  --code-bg: #e9edf2;
+  --code-block-bg: #161b24;
+  --border: #d9dee6;
+  --katman-vurgu: #2346d6;
+  --katman-vurgu-zemin: #e4e9fc;
+  --katman-izgara: #e3e8ef;
+  --katman-kutu: #ffffff;
+  --katman-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --katman-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
-[data-theme="dark"] {
-  --katman-vurgu: #ffb4ab;
-  --katman-kutu: #26262a;
+:root[data-theme="dark"] {
+  --theme: #0f131a;
+  --entry: #161b24;
+  --primary: #e5e9f0;
+  --secondary: #93a0b4;
+  --tertiary: #283041;
+  --content: #cfd6e2;
+  --code-bg: #1c2330;
+  --code-block-bg: #161b24;
+  --border: #283041;
+  --katman-vurgu: #8aa2ff;
+  --katman-vurgu-zemin: #1f2a4d;
+  --katman-izgara: #1a2130;
+  --katman-kutu: #161b24;
 }
+
+body { font-family: var(--katman-sans); }
+code, pre, kbd { font-family: var(--katman-mono); }
+.list, [data-theme="dark"] .list { background: var(--theme); }
 
 /* Genişlik: telefonda tema varsayılanı; tablet ve üstünde yazılar 960px
    (gömülü grafikler için), anasayfa ve listeler 1140px. */
@@ -36,159 +67,190 @@
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 
-/* Anasayfa bandı: kendiliğinden dönen öne çıkan yazılar */
-.katman-bant {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius);
-  margin: 8px 0 48px;
-  background: var(--katman-kutu);
-  aspect-ratio: 16 / 9;
+/* Sık kullanılan "veri etiketi" yazısı: küçük, eşaralıklı, büyük harf */
+.katman-bolum__baslik,
+.katman-etiketler,
+.katman-rozet,
+.katman-kunye dt,
+.katman-satir__tarih,
+.katman-sayilar,
+#menu a,
+.katman-slogan {
+  font-family: var(--katman-mono);
 }
-@media (min-width: 720px) { .katman-bant { aspect-ratio: 21 / 8; } }
-.katman-bant__ray { display: flex; height: 100%; transition: transform .6s ease; }
-@media (prefers-reduced-motion: reduce) { .katman-bant__ray { transition: none; } }
-.katman-bant__slayt {
-  position: relative;
-  flex: 0 0 100%;
-  height: 100%;
-  display: block;
-  color: #fff;
-  box-shadow: none;
-  background: #3a3a3c;
-}
-.katman-bant__slayt img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; }
-.katman-bant__yazi {
-  position: absolute;
-  inset: auto 0 0 0;
-  padding: 48px 20px 36px;
-  background: linear-gradient(to top, rgba(0,0,0,.82), rgba(0,0,0,0));
-}
-@media (min-width: 720px) { .katman-bant__yazi { padding: 64px 32px 40px; } }
-.katman-bant__ust { font-size: 13px; margin: 0 0 6px; opacity: .9; }
-.katman-bant__baslik { font-size: 20px; line-height: 1.25; margin: 0; color: #fff; }
-@media (min-width: 720px) { .katman-bant__baslik { font-size: 32px; max-width: 800px; } }
-.katman-bant__slayt:hover .katman-bant__baslik { text-decoration: underline; text-underline-offset: 4px; }
-.katman-bant__ok {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 0;
-  background: rgba(0,0,0,.45);
-  color: #fff;
-  font-size: 26px;
-  line-height: 1;
-  cursor: pointer;
-}
-.katman-bant__ok:hover { background: rgba(0,0,0,.7); }
-.katman-bant__ok--onceki { left: 12px; }
-.katman-bant__ok--sonraki { right: 12px; }
-@media (max-width: 719px) { .katman-bant__ok { display: none; } }
-.katman-bant__noktalar {
-  position: absolute;
-  bottom: 12px;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-}
-.katman-bant__nokta {
-  width: 10px;
-  height: 10px;
-  padding: 0;
-  border-radius: 50%;
-  border: 0;
-  background: rgba(255,255,255,.5);
-  cursor: pointer;
-}
-.katman-bant__nokta[aria-current="true"] { background: #fff; }
 
+/* ---------- Başlık çubuğu ---------- */
+.header { border-bottom: 1px solid var(--border); background: var(--theme); }
+.logo a { display: inline-flex; align-items: center; gap: 8px; font-size: 22px; font-weight: 700; letter-spacing: -.01em; text-transform: lowercase; }
+.katman-logo { flex: none; width: 28px; height: 28px; color: var(--primary); }
+.katman-slogan { font-size: 13px; font-weight: 400; color: var(--secondary); letter-spacing: 0; text-transform: none; }
+@media (max-width: 600px) { .katman-slogan { display: none; } }
+#menu a { font-size: 13px; text-transform: uppercase; letter-spacing: .05em; }
+#menu .active { border-bottom-color: var(--katman-vurgu); }
+
+/* ---------- Anasayfa girişi: kareli zemin + sayılar ---------- */
+.katman-giris {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: end;
+  margin: 8px 0 40px;
+  padding: 40px 24px;
+  border: 1px solid var(--border);
+  background-color: var(--theme);
+  background-image:
+    linear-gradient(var(--katman-izgara) 1px, transparent 1px),
+    linear-gradient(90deg, var(--katman-izgara) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+@media (min-width: 760px) { .katman-giris { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); padding: 48px 32px; } }
+.katman-giris h1 {
+  margin: 0;
+  font-size: clamp(30px, 5vw, 50px);
+  line-height: 1.08;
+  letter-spacing: -.02em;
+  font-weight: 600;
+  text-wrap: balance;
+}
+.katman-giris h1 em { font-style: normal; color: var(--katman-vurgu); }
+.katman-sayilar { margin: 0; background: var(--entry); border: 1px solid var(--border); font-size: 13px; }
+.katman-sayilar div { display: flex; justify-content: space-between; gap: 12px; padding: 8px 14px; border-bottom: 1px solid var(--border); }
+.katman-sayilar div:last-child { border-bottom: 0; }
+.katman-sayilar dt { color: var(--secondary); }
+.katman-sayilar dd { margin: 0; font-weight: 500; color: var(--katman-vurgu); font-variant-numeric: tabular-nums; text-align: right; }
+
+/* ---------- Bölümler ---------- */
 .katman-ara-gozat { margin-top: 40px; }
-
 .katman-bolum { margin-bottom: 48px; }
 .katman-bolum__baslik {
-  font-size: 22px;
-  margin-bottom: 16px;
-  padding-bottom: 6px;
-  border-bottom: 2px solid var(--katman-vurgu);
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 4px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--primary);
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--secondary);
 }
+.katman-bolum__baslik + .katman-filtre__grup { margin-top: 16px; }
+.katman-bolum__devam { margin-top: 16px; font-size: 15px; }
+.katman-bolum__devam a { color: var(--katman-vurgu); }
 
-/* Kart ızgarası: mobilde tek sütun */
-.katman-izgara { display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); }
-@media (min-width: 720px) { .katman-izgara { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1000px) { .katman-izgara { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-.katman-izgara .post-entry { margin-bottom: 0; }
-.katman-kart h3 { font-size: 20px; line-height: 1.3; }
-.katman-kart .entry-cover img { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; }
+/* ---------- Yazı satırı (layouts/_partials/katman/kart.html) ---------- */
+.katman-satir {
+  position: relative;
+  display: grid;
+  gap: 8px 24px;
+  grid-template-columns: minmax(0, 1fr);
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+@media (min-width: 760px) { .katman-satir { grid-template-columns: 112px minmax(0, 1fr) 220px; } }
+.katman-satir__tarih { font-size: 13px; color: var(--secondary); padding-top: 4px; font-variant-numeric: tabular-nums; }
+.katman-satir__metin { min-width: 0; }
+.katman-satir__baslik { margin: 0 0 6px; font-size: 21px; line-height: 1.3; font-weight: 600; text-wrap: balance; }
+.katman-satir__baslik a::after { content: ""; position: absolute; inset: 0; }
+.katman-satir:hover .katman-satir__baslik { color: var(--katman-vurgu); }
+.katman-satir__ozet { margin: 0 0 10px; color: var(--secondary); font-size: 15px; line-height: 1.55; }
+.katman-satir__yazar { margin: 8px 0 0; font-size: 14px; }
+.katman-satir__kapak { margin: 0; }
+.katman-satir__kapak img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border: 1px solid var(--border); }
+@media (max-width: 759px) { .katman-satir__kapak { order: -1; } }
+
+.katman-etiketler { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; font-size: 11.5px; text-transform: uppercase; letter-spacing: .04em; }
+.katman-etiketler li { border: 1px solid var(--border); background: var(--entry); padding: 2px 7px; }
+.katman-etiketler li:first-child { border-color: var(--katman-vurgu); color: var(--katman-vurgu); background: var(--katman-vurgu-zemin); }
 
 .katman-rozetler { margin: 0 0 6px; display: flex; gap: 6px; }
 .katman-rozet {
   display: inline-block;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: .02em;
-  padding: 2px 8px;
-  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  padding: 2px 7px;
   background: var(--katman-vurgu);
-  color: var(--theme);
+  color: var(--entry);
 }
-.katman-rozet--yarisma { background: var(--primary); }
+.katman-rozet--yarisma { background: var(--primary); color: var(--theme); }
 
-/* Filtreler */
+/* PaperMod'un kendi liste kartları (etiket, dönem sayfaları, arama) */
+.post-entry { border-radius: var(--radius); border: 1px solid var(--border); box-shadow: none; }
+.post-entry:hover { border-color: var(--katman-vurgu); }
+.entry-footer { font-family: var(--katman-mono); font-size: 12px; }
+.terms-tags a, .post-tags a { border-radius: var(--radius); font-family: var(--katman-mono); font-size: 13px; }
+
+/* Filtreler (Ara sayfası, "Göz at") */
 .katman-filtre__grup { margin-bottom: 16px; }
-.katman-filtre__grup h3 { font-size: 15px; color: var(--secondary); margin-bottom: 6px; }
+.katman-filtre__grup h3 { font-family: var(--katman-mono); font-size: 12px; font-weight: 400; text-transform: uppercase; letter-spacing: .06em; color: var(--secondary); margin-bottom: 6px; }
 .katman-filtre .terms-tags li { margin: 4px; }
 
-/* Künye kutusu */
-.katman-kunye {
-  background: var(--katman-kutu);
-  border-left: 4px solid var(--katman-vurgu);
-  border-radius: var(--radius);
-  padding: 16px 20px;
-  margin: 24px 0;
-  font-size: 15px;
+/* ---------- Yazı sayfası ---------- */
+.post-header { margin-bottom: 28px; }
+.post-title { font-size: clamp(30px, 4.6vw, 46px); line-height: 1.12; letter-spacing: -.02em; font-weight: 600; text-wrap: balance; }
+.post-description { font-size: 20px; line-height: 1.55; color: var(--content); max-width: 68ch; margin-top: 12px; }
+.entry-cover figcaption, .katman-figur figcaption {
+  font-family: var(--katman-mono);
+  font-size: 12px;
+  color: var(--secondary);
+  margin-top: 6px;
+  text-align: left;
 }
-.katman-kunye .katman-kunye__baslik { font-size: 15px; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 8px; }
-.katman-kunye dl { margin: 0; display: grid; gap: 6px; }
-.katman-kunye dl > div { display: grid; grid-template-columns: minmax(0, 1fr); }
-@media (min-width: 560px) { .katman-kunye dl > div { grid-template-columns: 140px minmax(0, 1fr); gap: 12px; } }
-.katman-kunye dt { color: var(--secondary); }
+.entry-cover img { border: 1px solid var(--border); }
+
+/* Metin 68 karakterde kalır; gömmeler, görseller ve tablolar 960px'e kadar genişler */
+.post-content > :is(p, ul, ol, blockquote, h2, h3, h4, h5, h6, dl) { max-width: 68ch; }
+.post-content h2 { font-size: 26px; font-weight: 600; letter-spacing: -.01em; }
+.post-content h3 { font-size: 19px; font-weight: 600; }
+.post-content blockquote { border-inline-start-color: var(--katman-vurgu); }
+
+/* Künye: yazının başında "veri kartı" (layouts/_partials/katman/kunye.html) */
+.katman-kunye { margin: 12px 0 24px; }
+.katman-kunye dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+  background: var(--katman-kutu);
+  font-size: 14px;
+}
+.katman-kunye dl > div { padding: 10px 14px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); min-width: 0; }
+.katman-kunye dt { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--secondary); }
 .katman-kunye dd { margin: 0; overflow-wrap: anywhere; }
-.katman-kunye a { box-shadow: 0 1px 0 var(--primary); }
+.katman-kunye a { box-shadow: 0 1px 0 var(--secondary); }
+.katman-kunye a:hover { color: var(--katman-vurgu); box-shadow: 0 1px 0 var(--katman-vurgu); }
 
 .katman-yarisma { list-style: none; padding: 0; margin-top: 12px; }
 .katman-yarisma li { margin: 4px 0; }
 
-/* Araştırma notu */
+/* Yazının sonu: veri kaynakları, ilk yayın, kalıcı adres */
 .katman-arastirma {
   border-top: 1px solid var(--border);
   margin-top: 40px;
   padding-top: 24px;
-  font-size: 17px;
+  font-size: 16px;
 }
-.katman-arastirma h2 { font-size: 22px; margin-bottom: 12px; }
-.katman-arastirma h3 { font-size: 17px; margin: 20px 0 6px; }
+.katman-arastirma h2 { font-family: var(--katman-mono); font-size: 12px; font-weight: 400; text-transform: uppercase; letter-spacing: .08em; color: var(--secondary); margin-bottom: 10px; }
 .katman-arastirma p { margin-bottom: 8px; }
 .katman-arastirma a { box-shadow: 0 1px 0 var(--primary); }
-.katman-kaynaklar { padding-left: 20px; }
+.katman-kaynaklar { padding-left: 20px; margin-bottom: 20px; }
 .katman-kaynaklar li { margin: 4px 0; }
 .katman-kaynak-tarih { color: var(--secondary); }
-.katman-arastirma > .katman-kunye:first-child { margin-top: 0; }
-.katman-ilk-yayin { font-size: 15px; color: var(--secondary); overflow-wrap: anywhere; margin-bottom: 24px; }
+.katman-ilk-yayin, .katman-kalici { font-size: 14px; color: var(--secondary); overflow-wrap: anywhere; }
+.katman-kalici { font-family: var(--katman-mono); font-size: 12px; }
 
-/* Arşiv */
+/* ---------- Arşiv ---------- */
 .katman-arsiv-filtre {
   display: grid;
   gap: 12px;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   margin-bottom: 12px;
 }
-.katman-arsiv-filtre label { display: block; font-size: 14px; color: var(--secondary); margin-bottom: 4px; }
+.katman-arsiv-filtre label { display: block; font-family: var(--katman-mono); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--secondary); margin-bottom: 4px; }
 .katman-arsiv-filtre select {
   width: 100%;
   min-height: 44px;
@@ -199,15 +261,16 @@
   color: var(--primary);
   font: inherit;
 }
-.katman-arsiv-sonuc { color: var(--secondary); margin-bottom: 24px; }
-.katman-arsiv-donem h2 { font-size: 26px; margin: 32px 0 8px; }
-.katman-arsiv-tur h3 { font-size: 17px; color: var(--secondary); margin: 16px 0 6px; }
+.katman-arsiv-sonuc { font-family: var(--katman-mono); font-size: 13px; color: var(--secondary); margin-bottom: 24px; }
+.katman-arsiv-donem h2 { font-size: 26px; font-weight: 600; margin: 32px 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--primary); }
+.katman-arsiv-tur h3 { font-family: var(--katman-mono); font-size: 12px; font-weight: 400; text-transform: uppercase; letter-spacing: .06em; color: var(--secondary); margin: 16px 0 6px; }
 .katman-arsiv-liste { list-style: none; padding: 0; margin: 0; }
 .katman-arsiv-oge { padding: 10px 0; border-bottom: 1px solid var(--border); }
 .katman-arsiv-oge a { font-weight: 600; }
-.katman-arsiv-meta { display: block; font-size: 14px; color: var(--secondary); }
+.katman-arsiv-oge a:hover { color: var(--katman-vurgu); }
+.katman-arsiv-meta { display: block; font-family: var(--katman-mono); font-size: 12px; color: var(--secondary); }
 
-/* Gömmeler (Flourish, Datawrapper, TimelineJS, StoryMapJS, Juxtapose, YouTube...) mobilde taşmasın */
+/* ---------- Gömmeler (Flourish, Datawrapper, TimelineJS, StoryMapJS, Juxtapose, YouTube...) ---------- */
 .post-content iframe,
 .post-content embed,
 .post-content object,
@@ -219,15 +282,13 @@
 .post-content .flourish-embed,
 .post-content [class*="juxtapose"] { max-width: 100%; }
 
-/* Logo: başlıkta sitenin adının yanında (layouts/_partials/katman/logo.html) */
-.logo a { display: inline-flex; align-items: center; gap: 8px; }
-.katman-logo { flex: none; width: 28px; height: 28px; color: var(--primary); }
+/* Decap "Gömme" bileşeninin sarmalayıcısı: ince çerçeveli veri kutusu */
+.katman-gomme { margin: 28px 0; padding: 8px; border: 1px solid var(--border); background: var(--katman-kutu); }
+.katman-gomme iframe { max-width: 100%; margin: 0; }
 
 /* Metin içi altyazılı görsel (layouts/_markup/render-image.html) */
 .katman-figur { margin: 24px 0; }
-.katman-figur img { margin: 0 auto; }
-.katman-figur figcaption { margin-top: 8px; font-size: .875rem; color: var(--secondary); text-align: center; }
+.katman-figur img { margin: 0; }
 
-/* Decap "Gömme" bileşeninin sarmalayıcısı */
-.katman-gomme { margin: 24px 0; }
-.katman-gomme iframe { max-width: 100%; }
+/* Alt bilgi */
+.footer { font-family: var(--katman-mono); font-size: 12px; }

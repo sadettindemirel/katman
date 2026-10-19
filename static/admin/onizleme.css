@@ -31,21 +31,21 @@ body {
   padding: 6px 12px;
   border: 0;
   border-radius: 6px;
-  background: #b3261e;
+  background: #2346d6;
   color: #fff;
   cursor: pointer;
 }
-.katman-onizleme__arac button:hover { background: #8f1e18; }
+.katman-onizleme__arac button:hover { background: #1a37b0; }
 .katman-uyari {
   max-width: 912px;
   margin: 16px auto 0;
   padding: 10px 14px;
-  border-left: 4px solid #b3261e;
-  background: #fbeceb;
-  color: #5c1410;
+  border-left: 4px solid #2346d6;
+  background: #e4e9fc;
+  color: #13246e;
   font: 14px/1.5 system-ui, sans-serif;
 }
 .katman-gomme-yer { margin: 24px 0; }
-.katman-gomme-yer:empty { min-height: 40px; background: #f6f4ef; }
+.katman-gomme-yer:empty { min-height: 40px; background: #f4f6f8; }
 .katman-figur { margin: 24px 0; }
 .katman-figur figcaption { margin-top: 8px; font-size: .875rem; color: #6b6b6b; text-align: center; }

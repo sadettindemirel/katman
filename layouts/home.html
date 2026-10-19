@@ -1,9 +1,39 @@
 {{- define "main" }}
 {{- $yazilar := where site.RegularPages "Section" "yazilar" }}
 
-<h1 class="katman-gizli">{{ site.Title }}</h1>
+{{- /* Giriş sayıları: yazı, yazar (virgülle ayrılmış ortak yazarlar ayrı sayılır), ders, dönem aralığı */}}
+{{- $yazarlar := slice }}
+{{- $dersler := slice }}
+{{- range $yazilar }}
+  {{- range split (.Params.author | default "") "," }}{{ with trim . " " }}{{ $yazarlar = $yazarlar | append . }}{{ end }}{{ end }}
+  {{- with .Params.ders }}{{ $dersler = $dersler | append . }}{{ end }}
+{{- end }}
+{{- /* Dönemleri kronolojik sırala: yıl*10 + (Bahar=1, Yaz=2, Güz=3); arsiv.html ile aynı kural */}}
+{{- $sira := dict "Bahar" 1 "Yaz" 2 "Güz" 3 }}
+{{- $donemler := slice }}
+{{- range site.Taxonomies.donemler }}
+  {{- $ad := .Page.LinkTitle }}
+  {{- if findRE `^\d{4} (Güz|Bahar|Yaz)$` $ad }}
+    {{- $parca := split $ad " " }}
+    {{- $donemler = $donemler | append (dict "ad" $ad "anahtar" (add (mul (int (index $parca 0)) 10) (index $sira (index $parca 1)))) }}
+  {{- end }}
+{{- end }}
+{{- $donemler = sort $donemler "anahtar" }}
 
-{{- partial "katman/banner.html" . }}
+<section class="katman-giris" aria-labelledby="giris-baslik">
+  <h1 id="giris-baslik">Öğrenci perspektifinden <em>veri hikâyeleri.</em></h1>
+  {{- with $yazilar }}
+  <dl class="katman-sayilar">
+    <div><dt>yazı</dt><dd>{{ len . }}</dd></div>
+    <div><dt>yazar</dt><dd>{{ len ($yazarlar | uniq) }}</dd></div>
+    <div><dt>ders</dt><dd>{{ len ($dersler | uniq) }}</dd></div>
+    {{- with $donemler }}
+    {{- $ilk := (index . 0).ad }}{{ $son := (index . (sub (len .) 1)).ad }}
+    <div><dt>dönem</dt><dd>{{ if eq $ilk $son }}{{ $ilk }}{{ else }}{{ $ilk }} → {{ $son }}{{ end }}</dd></div>
+    {{- end }}
+  </dl>
+  {{- end }}
+</section>
 
 {{- /* Vitrin: data/vitrin.yaml içindeki dosya adlarının sırasıyla */}}
 {{- $vitrin := slice }}
@@ -16,22 +46,17 @@
 {{- end }}
 {{- with $vitrin }}
 <section class="katman-bolum" aria-labelledby="vitrin-baslik">
-  <h2 id="vitrin-baslik" class="katman-bolum__baslik">Vitrin</h2>
-  <div class="katman-izgara">
-    {{- range . }}{{ partial "katman/kart.html" . }}{{ end }}
-  </div>
+  <h2 id="vitrin-baslik" class="katman-bolum__baslik"><span>Vitrin</span><span>{{ len . }} yazı</span></h2>
+  {{- range . }}{{ partial "katman/kart.html" . }}{{ end }}
 </section>
 {{- end }}
 
-
 <section class="katman-bolum" aria-labelledby="son-baslik">
-  <h2 id="son-baslik" class="katman-bolum__baslik">Son yazılar</h2>
+  <h2 id="son-baslik" class="katman-bolum__baslik"><span>Son yazılar</span>{{ with $yazilar }}<span>{{ len . }} kayıt</span>{{ end }}</h2>
   {{- with $yazilar }}
-  <div class="katman-izgara">
-    {{- range first 12 .ByDate.Reverse }}{{ partial "katman/kart.html" . }}{{ end }}
-  </div>
+  {{- range first 12 .ByDate.Reverse }}{{ partial "katman/kart.html" . }}{{ end }}
   {{- if gt (len .) 12 }}
-  <p><a href="{{ "arsiv/" | relURL }}">Arşivde tüm yazılar ({{ len . }}) →</a></p>
+  <p class="katman-bolum__devam"><a href="{{ "arsiv/" | relURL }}">Arşivde tüm yazılar ({{ len . }}) →</a></p>
   {{- end }}
   {{- else }}
   <p>Henüz yayımlanmış yazı yok. İlk çalışmalar yakında burada.</p>

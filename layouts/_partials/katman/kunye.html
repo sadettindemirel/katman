@@ -1,6 +1,7 @@
-{{- /* Künye kutusu: yazar, ders, dönem, ödev türü, tarih, kalıcı adres. */ -}}
+{{- /* Künye: yazının başında veri kartı. Yazar, ders, dönem, ödev türü, tarihler, okuma süresi, ilk yayın.
+       Kalıcı adres yazının sonundadır (katman/kaynaklar.html). */ -}}
 <aside class="katman-kunye" aria-labelledby="kunye-baslik">
-  <h2 id="kunye-baslik" class="katman-kunye__baslik">Künye</h2>
+  <h2 id="kunye-baslik" class="katman-gizli">Künye</h2>
   <dl>
     {{- with .Params.author }}
     <div><dt>Yazar</dt><dd>{{ . }}</dd></div>
@@ -18,9 +19,11 @@
     {{- if and (not .Lastmod.IsZero) (ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02")) }}
     <div><dt>Son güncelleme</dt><dd><time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod | time.Format ":date_long" }}</time></dd></div>
     {{- end }}
+    {{- if (.Param "ShowReadingTime") }}
+    <div><dt>Okuma süresi</dt><dd>{{ i18n "read_time" .ReadingTime }}</dd></div>
+    {{- end }}
     {{- with .Params.ilk_yayin }}
     <div><dt>İlk yayın</dt><dd><a href="{{ . }}" rel="noopener">{{ (urls.Parse .).Host | strings.TrimPrefix "www." }}</a></dd></div>
     {{- end }}
-    <div><dt>Kalıcı adres</dt><dd><a href="{{ .Permalink }}">{{ .Permalink }}</a></dd></div>
   </dl>
 </aside>

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Katman">
-  <style>.m{fill:#1f1f1f}.c{stroke:#1f1f1f}.v{fill:#b3261e}@media (prefers-color-scheme:dark){.m{fill:#f2f2f2}.c{stroke:#f2f2f2}.v{fill:#ffb4ab}}</style>
+  <style>.m{fill:#1f1f1f}.c{stroke:#1f1f1f}.v{fill:#2346d6}@media (prefers-color-scheme:dark){.m{fill:#f2f2f2}.c{stroke:#f2f2f2}.v{fill:#8aa2ff}}</style>
   <defs>
     <mask id="u" maskUnits="userSpaceOnUse"><rect width="48" height="48" fill="#fff"/><path d="M24 3 44 13 24 23 4 13Z" stroke="#000" stroke-width="5" stroke-linejoin="round"/></mask>
     <mask id="o" maskUnits="userSpaceOnUse"><rect width="48" height="48" fill="#fff"/><path d="M24 16 44 26 24 36 4 26Z" stroke="#000" stroke-width="4" stroke-linejoin="round"/></mask>

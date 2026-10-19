@@ -6,15 +6,11 @@
 <article class="post-single">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
+    {{- partial "katman/kunye.html" . }}
     <h1 class="post-title">{{ .Title }}</h1>
     {{- with .Description }}
     <div class="post-description">{{ . }}</div>
     {{- end }}
-    <div class="post-meta">
-      {{- with .Params.author }}<span>{{ . }}</span>&nbsp;·&nbsp;{{ end }}
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
-      {{- if (.Param "ShowReadingTime") }}&nbsp;·&nbsp;<span>{{ i18n "read_time" .ReadingTime }}</span>{{ end }}
-    </div>
     {{- with $yarismalar }}
     <ul class="katman-yarisma" aria-label="Yarışmalar">
       {{- range . }}

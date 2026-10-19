@@ -1,30 +1,37 @@
-{{- /* Yazı kartı. Bağlam: sayfa. Anasayfa, vitrin ve arşivde kullanılır. */ -}}
+{{- /* Yazı satırı. Bağlam: sayfa. Anasayfada (vitrin ve son yazılar) kullanılır.
+       Solda tarih, ortada başlık/özet/etiketler, sağda kapak; telefonda kapak üstte. */ -}}
 {{- $slug := .File.ContentBaseName }}
 {{- $vitrin := in (hugo.Data.vitrin | default slice) $slug }}
 {{- $yarisma := index (hugo.Data.yarismalar | default dict) $slug }}
-<article class="post-entry katman-kart">
-  {{- with .Params.cover.image }}
-  <figure class="entry-cover">
-    <img loading="lazy" src="{{ . }}" alt="{{ $.Params.cover.alt | default "" }}" onerror="this.parentNode.remove()">
-  </figure>
-  {{- end }}
-  <header class="entry-header">
+<article class="katman-satir">
+  <time class="katman-satir__tarih" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+  <div class="katman-satir__metin">
     {{- if or $vitrin $yarisma }}
     <p class="katman-rozetler">
       {{- if $vitrin }}<span class="katman-rozet">Vitrin</span>{{ end }}
       {{- if $yarisma }}<span class="katman-rozet katman-rozet--yarisma">Yarışma</span>{{ end }}
     </p>
     {{- end }}
-    <h3>{{ .Title }}</h3>
-  </header>
-  {{- with .Description }}
-  <div class="entry-content"><p>{{ . | plainify }}</p></div>
+    <h3 class="katman-satir__baslik"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{- with .Description }}
+    <p class="katman-satir__ozet">{{ . | plainify }}</p>
+    {{- end }}
+    {{- $etiketler := slice }}
+    {{- with .Params.donemler }}{{ $etiketler = $etiketler | append . }}{{ end }}
+    {{- with .Params.odevler }}{{ $etiketler = $etiketler | append . }}{{ end }}
+    {{- with .Params.ders }}{{ $etiketler = $etiketler | append . }}{{ end }}
+    {{- with $etiketler }}
+    <ul class="katman-etiketler" aria-label="Dönem, ödev türü ve ders">
+      {{- range . }}<li>{{ . }}</li>{{ end }}
+    </ul>
+    {{- end }}
+    {{- with .Params.author }}
+    <p class="katman-satir__yazar">{{ . }}</p>
+    {{- end }}
+  </div>
+  {{- with .Params.cover.image }}
+  <figure class="katman-satir__kapak">
+    <img loading="lazy" src="{{ . }}" alt="{{ $.Params.cover.alt | default "" }}" onerror="this.parentNode.remove()">
+  </figure>
   {{- end }}
-  <footer class="entry-footer">
-    {{- with .Params.author }}<span>{{ . }}</span> · {{ end }}
-    {{- with .Params.donemler }}<span>{{ . }}</span> · {{ end }}
-    {{- with .Params.odevler }}<span>{{ . }}</span> · {{ end }}
-    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
-  </footer>
-  <a class="entry-link" aria-label="{{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>

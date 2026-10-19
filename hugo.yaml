@@ -59,6 +59,7 @@ markup:
 params:
   description: "Öğrenci perspektifinden veri hikâyeleri."
   tagline: "Öğrenci perspektifinden veri hikâyeleri"
+  slogan: "/ veri hikâyeleri"   # başlıkta site adının yanında (layouts/_partials/header.html)
   mainSections: [yazilar]
   defaultTheme: auto
   DateFormat: "2 January 2006"

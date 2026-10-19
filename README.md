@@ -24,7 +24,9 @@ Tema dosyalarına dokunulmaz. Değişiklikler sitenin kendi `layouts/`, `assets/
 | `static/admin/config.yml` | Decap CMS form alanları |
 | `static/admin/katman-cms.js`, `katman-gomme.js` | Editörün Görsel/Gömme düğmeleri, önizleme şablonları |
 | `static/admin/onizleme.html` | Yeni pencerede canlı taslak önizlemesi |
-| `layouts/_partials/katman/` | Künye, araştırma notu, kart, içerik denetimi |
+| `layouts/_partials/katman/` | Künye, araştırma notu, yazı satırı, içerik denetimi |
+| `assets/css/extended/` | "Veri defteri" görünümü (`katman.css`) ve yazı tipleri (`fontlar.css`) |
+| `static/fonts/` | IBM Plex Sans ve Mono, siteden sunulur (SIL OFL 1.1) |
 | `docs/` | Kılavuzlar |
 
 ## Kılavuzlar
